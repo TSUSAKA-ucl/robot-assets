@@ -1,0 +1,34 @@
+{
+  "name": "@ucl-nuee/nova2",
+  "version": "1.0.0",
+  "files": [
+    "public/nova2_robot/Link1.STL.bin",
+    "public/nova2_robot/Link1.STL.gltf",
+    "public/nova2_robot/Link2.STL.bin",
+    "public/nova2_robot/Link2.STL.gltf",
+    "public/nova2_robot/Link3.STL.bin",
+    "public/nova2_robot/Link3.STL.gltf",
+    "public/nova2_robot/Link4.STL.bin",
+    "public/nova2_robot/Link4.STL.gltf",
+    "public/nova2_robot/Link5.STL.bin",
+    "public/nova2_robot/Link5.STL.gltf",
+    "public/nova2_robot/Link6.STL.bin",
+    "public/nova2_robot/Link6.STL.gltf",
+    "public/nova2_robot/base_link.STL.bin",
+    "public/nova2_robot/base_link.STL.gltf",
+    "public/nova2_robot/linkmap.json",
+    "public/nova2_robot/nova2_robot.urdf",
+    "public/nova2_robot/update.json",
+    "public/nova2_robot/urdf.json"
+  ],
+  "bin": {
+    "copy-assets": "./scripts/copy-assets.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "keywords": [],
+  "author": "Please change this part",
+  "license": "I won't mention this",
+  "description": "UCL private GLTF and JSON assets for this robot"
+}

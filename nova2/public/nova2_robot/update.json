@@ -1,0 +1,117 @@
+{
+  "base_link": {
+    "visual": [
+      {
+        "geometry": { "mesh": { "$": {
+          "filename": "base_link.STL.gltf"
+        }}}
+      },
+      {
+        "geometry": { "mesh": { "$": {
+          "filename": "base_link.bbox.gltf"
+        }}}
+      }
+    ]
+  },
+  "Link1": {
+    "visual": [
+      {
+        "origin": { "$": { "rpyDegrees": [ 0, 0, 90 ], "xyz": [ 0, 0, 0 ]}},
+        "geometry": { "mesh": { "$": {
+          "filename": "Link1.STL.gltf"
+        }}}
+      },
+      {
+        "origin": { "$": { "rpyDegrees": [ 0, 0, 90 ], "xyz": [ 0, 0, 0 ]}},
+        "geometry": { "mesh": { "$": {
+          "filename": "Link1.bbox.gltf"
+        }}}
+      }
+    ]
+  },
+  "Link2": {
+    "visual": [
+      {
+        "geometry": { "mesh": { "$": {
+          "filename": "Link2.STL.gltf"
+        }}}
+      },
+      {
+        "geometry": { "mesh": { "$": {
+          "filename": "Link2.bbox.gltf"
+        }}}
+      }
+    ]
+  },
+  "Link3": {
+    "visual": [
+      {
+        "geometry": { "mesh": { "$": {
+          "filename": "Link3.STL.gltf"
+        }}}
+      },
+      {
+        "geometry": { "mesh": { "$": {
+          "filename": "Link3.bbox.gltf"
+        }}}
+      }
+    ]
+  },
+  "Link4": {
+    "visual": [
+      {
+        "geometry": { "mesh": { "$": {
+          "filename": "Link4.STL.gltf"
+        }}}
+      },
+      {
+        "geometry": { "mesh": { "$": {
+          "filename": "Link4.bbox.gltf"
+        }}}
+      }
+    ]
+  },
+  "Link5": {
+    "visual": [
+      {
+        "geometry": { "mesh": { "$": {
+          "filename": "Link5.STL.gltf"
+        }}}
+      },
+      {
+        "geometry": { "mesh": { "$": {
+          "filename": "Link5.bbox.gltf"
+        }}}
+      }
+    ]
+  },
+  "Link6": {
+    "visual": [
+      {
+        "geometry": { "mesh": { "$": {
+          "filename": "Link6.STL.gltf"
+        }}}
+      },
+      {
+        "geometry": { "mesh": { "$": {
+          "filename": "Link6.bbox.gltf"
+        }}}
+      },
+      {
+        "geometry": { "mesh": { "$": {
+          "filename": "CONVUM_SGE-M5-N-body-m.bbox.gltf"
+        }}}
+      },
+      {
+        "geometry": { "mesh": { "$": {
+          "filename": "CONVUM_SGE-M5-N-realsense-m.bbox.gltf"
+        }}}
+      },
+      {
+        "geometry": { "mesh": { "$": {
+          "filename": "CONVUM_SGE-M5-N-suction-m.bbox.gltf"
+        }}}
+      }
+    ]
+  }
+}

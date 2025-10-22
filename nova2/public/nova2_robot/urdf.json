@@ -1,0 +1,300 @@
+[
+  {
+    "$": {
+      "name": "dummy_joint",
+      "type": "fixed"
+    },
+    "parent": {
+      "$": {
+        "link": "dummy_link"
+      }
+    },
+    "child": {
+      "$": {
+        "link": "base_link"
+      }
+    }
+  },
+  {
+    "$": {
+      "name": "joint1",
+      "type": "revolute"
+    },
+    "origin": {
+      "$": {
+        "rpy": [
+          0,
+          0,
+          0
+        ],
+        "xyz": [
+          0,
+          0,
+          0.2234
+        ]
+      }
+    },
+    "parent": {
+      "$": {
+        "link": "base_link"
+      }
+    },
+    "child": {
+      "$": {
+        "link": "Link1"
+      }
+    },
+    "axis": {
+      "$": {
+        "xyz": [
+          0,
+          0,
+          1
+        ]
+      }
+    },
+    "limit": {
+      "$": {
+        "effort": 0,
+        "lower": -6.28,
+        "upper": 6.28,
+        "velocity": 0
+      }
+    }
+  },
+  {
+    "$": {
+      "name": "joint2",
+      "type": "revolute"
+    },
+    "origin": {
+      "$": {
+        "rpy": [
+          1.5708,
+          1.5708,
+          0
+        ],
+        "xyz": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "parent": {
+      "$": {
+        "link": "Link1"
+      }
+    },
+    "child": {
+      "$": {
+        "link": "Link2"
+      }
+    },
+    "axis": {
+      "$": {
+        "xyz": [
+          0,
+          0,
+          1
+        ]
+      }
+    },
+    "limit": {
+      "$": {
+        "effort": 0,
+        "lower": -3.14,
+        "upper": 3.14,
+        "velocity": 0
+      }
+    }
+  },
+  {
+    "$": {
+      "name": "joint3",
+      "type": "revolute"
+    },
+    "origin": {
+      "$": {
+        "rpy": [
+          0,
+          0,
+          0
+        ],
+        "xyz": [
+          -0.28,
+          0,
+          0
+        ]
+      }
+    },
+    "parent": {
+      "$": {
+        "link": "Link2"
+      }
+    },
+    "child": {
+      "$": {
+        "link": "Link3"
+      }
+    },
+    "axis": {
+      "$": {
+        "xyz": [
+          0,
+          0,
+          1
+        ]
+      }
+    },
+    "limit": {
+      "$": {
+        "effort": 0,
+        "lower": -2.79,
+        "upper": 2.79,
+        "velocity": 0
+      }
+    }
+  },
+  {
+    "$": {
+      "name": "joint4",
+      "type": "revolute"
+    },
+    "origin": {
+      "$": {
+        "rpy": [
+          0,
+          0,
+          -1.5708
+        ],
+        "xyz": [
+          -0.22501,
+          0,
+          0.1175
+        ]
+      }
+    },
+    "parent": {
+      "$": {
+        "link": "Link3"
+      }
+    },
+    "child": {
+      "$": {
+        "link": "Link4"
+      }
+    },
+    "axis": {
+      "$": {
+        "xyz": [
+          0,
+          0,
+          1
+        ]
+      }
+    },
+    "limit": {
+      "$": {
+        "effort": 0,
+        "lower": -6.28,
+        "upper": 6.28,
+        "velocity": 0
+      }
+    }
+  },
+  {
+    "$": {
+      "name": "joint5",
+      "type": "revolute"
+    },
+    "origin": {
+      "$": {
+        "rpy": [
+          1.5708,
+          0,
+          0
+        ],
+        "xyz": [
+          0,
+          -0.12,
+          0
+        ]
+      }
+    },
+    "parent": {
+      "$": {
+        "link": "Link4"
+      }
+    },
+    "child": {
+      "$": {
+        "link": "Link5"
+      }
+    },
+    "axis": {
+      "$": {
+        "xyz": [
+          0,
+          0,
+          1
+        ]
+      }
+    },
+    "limit": {
+      "$": {
+        "effort": 0,
+        "lower": -6.28,
+        "upper": 6.28,
+        "velocity": 0
+      }
+    }
+  },
+  {
+    "$": {
+      "name": "joint6",
+      "type": "revolute"
+    },
+    "origin": {
+      "$": {
+        "rpy": [
+          -1.5708,
+          0,
+          0
+        ],
+        "xyz": [
+          0,
+          0.088004,
+          0
+        ]
+      }
+    },
+    "parent": {
+      "$": {
+        "link": "Link5"
+      }
+    },
+    "child": {
+      "$": {
+        "link": "Link6"
+      }
+    },
+    "axis": {
+      "$": {
+        "xyz": [
+          0,
+          0,
+          1
+        ]
+      }
+    },
+    "limit": {
+      "$": {
+        "effort": 0,
+        "lower": -6.28,
+        "upper": 6.28,
+        "velocity": 0
+      }
+    }
+  }
+]
