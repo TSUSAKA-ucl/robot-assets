@@ -1,0 +1,34 @@
+{
+  "name": "@ucl-nuee/jaka-zu5",
+  "version": "1.0.0",
+  "files": [
+    "public/jaka_zu_5/JAKA_Zu_5_BASE.bin",
+    "public/jaka_zu_5/JAKA_Zu_5_BASE.gltf",
+    "public/jaka_zu_5/JAKA_Zu_5_J1.bin",
+    "public/jaka_zu_5/JAKA_Zu_5_J1.gltf",
+    "public/jaka_zu_5/JAKA_Zu_5_J2.bin",
+    "public/jaka_zu_5/JAKA_Zu_5_J2.gltf",
+    "public/jaka_zu_5/JAKA_Zu_5_J3.bin",
+    "public/jaka_zu_5/JAKA_Zu_5_J3.gltf",
+    "public/jaka_zu_5/JAKA_Zu_5_J4.bin",
+    "public/jaka_zu_5/JAKA_Zu_5_J4.gltf",
+    "public/jaka_zu_5/JAKA_Zu_5_J5.bin",
+    "public/jaka_zu_5/JAKA_Zu_5_J5.gltf",
+    "public/jaka_zu_5/JAKA_Zu_5_J6.bin",
+    "public/jaka_zu_5/JAKA_Zu_5_J6.gltf",
+    "public/jaka_zu_5/linkmap.json",
+    "public/jaka_zu_5/shapes.json",
+    "public/jaka_zu_5/update.json",
+    "public/jaka_zu_5/urdf.json"
+  ],
+  "bin": {
+    "copy-assets": "./scripts/copy-assets.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "keywords": [],
+  "author": "Please change this part",
+  "license": "I won't mention this",
+  "description": "UCL private GLTF and JSON assets for this robot"
+}
