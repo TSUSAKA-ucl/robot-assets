@@ -1,6 +1,6 @@
 {
   "name": "@ucl-nuee/jaka-zu5",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "files": [
     "public/jaka_zu_5/JAKA_Zu_5_BASE.bin",
     "public/jaka_zu_5/JAKA_Zu_5_BASE.gltf",
@@ -19,7 +19,17 @@
     "public/jaka_zu_5/linkmap.json",
     "public/jaka_zu_5/shapes.json",
     "public/jaka_zu_5/update.json",
-    "public/jaka_zu_5/urdf.json"
+    "public/jaka_zu_5/urdf.json",
+    "public/jaka_hand_A/AG-160-95-2a.glb",
+    "public/jaka_hand_A/AG-160-95-2b.glb",
+    "public/jaka_hand_A/AG-160-95-3a.glb",
+    "public/jaka_hand_A/AG-160-95-3b.glb",
+    "public/jaka_hand_A/AG-160-95-4a.glb",
+    "public/jaka_hand_A/AG-160-95-4b.glb",
+    "public/jaka_hand_A/AG-160-95-body.glb",
+    "public/jaka_hand_A/update.json",
+    "public/jaka_hand_A/linkmap.json",
+    "public/jaka_hand_A/urdf.json"
   ],
   "bin": {
     "copy-assets": "./scripts/copy-assets.js"

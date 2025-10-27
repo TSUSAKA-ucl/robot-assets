@@ -1,0 +1,53 @@
+[
+  {
+    "$": {
+      "name": "joint_1",
+      "type": "revolute"
+    },
+    "origin": { "$": {
+      "xyz": [ 0.03, 0, 0.15 ],
+      "rpy": [ 0, 1.5708, 0]
+    } },
+    "axis": { "$": { "xyz": [ 0, 0, 1 ] } },
+    "parent": { "$": {
+      "link": "palmLink"
+    } },
+    "child": { "$": {
+      "link": "finger1"
+    } }
+  },
+  {
+    "$": {
+      "name": "joint_2",
+      "type": "revolute"
+    },
+    "origin": { "$": {
+      "xyz": [ 0.03, 0, 0.055 ],
+      "rpy": [ 0, 0, 0 ]
+    } },
+    "axis": { "$": { "xyz": [ 0, 0, 1 ] } },
+    "parent": { "$": {
+      "link": "finger1"
+    } },
+    "child": { "$": {
+      "link": "finger2"
+    } }
+  },
+  {
+    "$": {
+      "name": "joint_3",
+      "type": "revolute"
+    },
+    "origin": { "$": {
+      "xyz": [ 0, 0, 0.1 ],
+      "rpy": [ 0, 0, 0 ]
+    } },
+    "axis": { "$": { "xyz": [ 0, 0, 1 ] } },
+    "parent": { "$": {
+      "link": "finger2"
+    } },
+    "child": { "$": {
+      "link": "finger3"
+    } }
+  }
+]

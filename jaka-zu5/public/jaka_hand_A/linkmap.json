@@ -1,0 +1,50 @@
+{
+  "palmLink": {
+    "$": { "name": "palmLink" },
+    "visual": [
+      {
+	"origin": { "$": {
+          "rpyDegrees": [ 180, 0, 0 ], "xyz": [ 0, 0, 0.05 ]
+	} },
+	"geometry": {
+          "mesh": { "$": {
+            "filename": "AG-160-95-body.glb"
+          }}}}
+    ] },
+  "finger1": {
+    "$": { "name": "finger1" },
+    "visual": [
+      {
+	"origin": { "$": {
+          "rpy": [ 0, 0, 0 ], "xyz": [ 0, 0, 0 ]
+	} },
+	"geometry": {
+          "mesh": { "$": {
+            "filename": "AG-160-95-2a.glb"
+          } } }}
+    ] },
+  "finger2": {
+    "$": { "name": "finger2" },
+    "visual": [
+      {
+	"origin": { "$": {
+          "rpy": [ 0, 0, 0 ], "xyz": [ 0, 0, 0 ]
+	} },
+	"geometry": {
+          "mesh": { "$": {
+            "filename": "AG-160-95-3a.glb"
+          } } }}
+    ] },
+  "finger3": {
+    "$": { "name": "finger3" },
+    "visual": [
+      {
+	"origin": { "$": {
+          "rpy": [ 0, 0, 0 ], "xyz": [ 0, 0, 0 ]
+	} },
+	"geometry": {
+          "mesh": { "$": {
+            "filename": "AG-160-95-4a.glb"
+          } } }}
+    ] }
+}
