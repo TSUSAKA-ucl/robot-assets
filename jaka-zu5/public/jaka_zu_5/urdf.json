@@ -211,8 +211,8 @@
     "limit": {
       "$": {
         "effort": 2000,
-        "lower": -1.48,
-        "upper": 4.62,
+        "lower": -6.28,
+        "upper": 6.28,
         "velocity": 3.14
       }
     }
