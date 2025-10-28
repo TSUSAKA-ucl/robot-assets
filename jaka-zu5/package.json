@@ -1,6 +1,14 @@
 {
   "name": "@ucl-nuee/jaka-zu5",
-  "version": "1.0.2",
+  "version": "1.0.4",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
   "files": [
     "public/jaka_zu_5/JAKA_Zu_5_BASE.bin",
     "public/jaka_zu_5/JAKA_Zu_5_BASE.gltf",
@@ -20,25 +28,48 @@
     "public/jaka_zu_5/shapes.json",
     "public/jaka_zu_5/update.json",
     "public/jaka_zu_5/urdf.json",
+
     "public/jaka_hand_A/AG-160-95-2a.glb",
-    "public/jaka_hand_A/AG-160-95-2b.glb",
     "public/jaka_hand_A/AG-160-95-3a.glb",
-    "public/jaka_hand_A/AG-160-95-3b.glb",
     "public/jaka_hand_A/AG-160-95-4a.glb",
-    "public/jaka_hand_A/AG-160-95-4b.glb",
     "public/jaka_hand_A/AG-160-95-body.glb",
     "public/jaka_hand_A/update.json",
     "public/jaka_hand_A/linkmap.json",
-    "public/jaka_hand_A/urdf.json"
+    "public/jaka_hand_A/urdf.json",
+
+    "public/jaka_hand_B/AG-160-95-2b.glb",
+    "public/jaka_hand_B/AG-160-95-3b.glb",
+    "public/jaka_hand_B/AG-160-95-4b.glb",
+    "public/jaka_hand_B/update.json",
+    "public/jaka_hand_B/linkmap.json",
+    "public/jaka_hand_B/urdf.json"
   ],
   "bin": {
     "copy-assets": "./scripts/copy-assets.js"
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 0"
+  "exports": {
+    ".": "./src/index.js",
+    "./JakaHandEntity": "./src/JakaHand.jsx"
   },
-  "keywords": [],
-  "author": "Please change this part",
-  "license": "I won't mention this",
-  "description": "UCL private GLTF and JSON assets for this robot"
+  "peerDependencies": {
+    "aframe": "^1.7.1",
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0"
+  },
+  "dependencies": {
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "@ucl-nuee/robot-loader": "file:../../AFrameRapier/robot-loader"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.36.0",
+    "@types/react": "^19.1.16",
+    "@types/react-dom": "^19.1.9",
+    "@vitejs/plugin-react": "^5.0.4",
+    "eslint": "^9.36.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.22",
+    "globals": "^16.4.0",
+    "vite": "^7.1.7"
+  }
 }

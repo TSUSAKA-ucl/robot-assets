@@ -2,14 +2,6 @@
   "palmLink": {
     "$": { "name": "palmLink" },
     "visual": [
-      {
-	"origin": { "$": {
-          "rpyDegrees": [ 180, 0, -90 ], "xyz": [ 0, -0.012, 0.046 ]
-	} },
-	"geometry": {
-          "mesh": { "$": {
-            "filename": "AG-160-95-body.glb"
-          }}}}
     ] },
   "finger1": {
     "$": { "name": "finger1" },
@@ -20,7 +12,7 @@
 	} },
 	"geometry": {
           "mesh": { "$": {
-            "filename": "AG-160-95-2a.glb"
+            "filename": "AG-160-95-2b.glb"
           } } }}
     ] },
   "finger2": {
@@ -32,15 +24,15 @@
 	} },
 	"geometry": {
           "mesh": { "$": {
-            "filename": "AG-160-95-3a.glb"
+            "filename": "AG-160-95-3b.glb"
           } } }},
       {
 	"origin": { "$": {
-          "rpyDegrees": [90, 0, 0 ], "xyz": [ 0, 0.000, 0.0 ]
+          "rpyDegrees": [90, 0, 0 ], "xyz": [ 0, 0.00, 0.0 ]
 	} },
 	"geometry": {
           "mesh": { "$": {
-            "filename": "AG-160-95-4a.glb"
+            "filename": "AG-160-95-4b.glb"
           } } }}
     ] }
 }
