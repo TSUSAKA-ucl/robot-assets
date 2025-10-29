@@ -59,7 +59,7 @@
   "dependencies": {
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
-    "@ucl-nuee/robot-loader": "file:../../AFrameRapier/robot-loader"
+    "@ucl-nuee/robot-loader": "file:../../robot-loader"
   },
   "devDependencies": {
     "@eslint/js": "^9.36.0",
