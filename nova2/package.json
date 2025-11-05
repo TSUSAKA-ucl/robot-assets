@@ -1,6 +1,6 @@
 {
   "name": "@ucl-nuee/nova2",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "files": [
     "public/nova2_robot/Link1.STL.bin",
     "public/nova2_robot/Link1.STL.gltf",
