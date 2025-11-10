@@ -1,5 +1,5 @@
-{
-  "dummy_joint": {
+[
+  {
     "$": {
       "name": "dummy_joint",
       "type": "fixed"
@@ -15,7 +15,7 @@
       }
     }
   },
-  "joint1": {
+  {
     "$": {
       "name": "joint1",
       "type": "revolute"
@@ -62,7 +62,7 @@
       }
     }
   },
-  "joint2": {
+  {
     "$": {
       "name": "joint2",
       "type": "revolute"
@@ -109,7 +109,7 @@
       }
     }
   },
-  "joint3": {
+  {
     "$": {
       "name": "joint3",
       "type": "revolute"
@@ -156,7 +156,7 @@
       }
     }
   },
-  "joint4": {
+  {
     "$": {
       "name": "joint4",
       "type": "revolute"
@@ -203,7 +203,7 @@
       }
     }
   },
-  "joint5": {
+  {
     "$": {
       "name": "joint5",
       "type": "revolute"
@@ -250,7 +250,7 @@
       }
     }
   },
-  "joint6": {
+  {
     "$": {
       "name": "joint6",
       "type": "revolute"
@@ -297,4 +297,4 @@
       }
     }
   }
-}
+]

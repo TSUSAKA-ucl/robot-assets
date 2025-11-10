@@ -1,6 +1,6 @@
 {
   "name": "@ucl-nuee/jaka-zu5",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "private": true,
   "type": "module",
   "scripts": {
@@ -29,18 +29,26 @@
     "public/jaka_zu_5/update.json",
     "public/jaka_zu_5/urdf.json",
 
-    "public/jaka_hand_A/AG-160-95-2a.glb",
-    "public/jaka_hand_A/AG-160-95-3a.glb",
-    "public/jaka_hand_A/AG-160-95-4a.glb",
-    "public/jaka_hand_A/AG-160-95-body.glb",
+    "public/jaka_hand_A/AG-160-95-2a.gltf",
+    "public/jaka_hand_A/AG-160-95-2a.bin",
+    "public/jaka_hand_A/AG-160-95-3a.gltf",
+    "public/jaka_hand_A/AG-160-95-3a.bin",
+    "public/jaka_hand_A/AG-160-95-4a.gltf",
+    "public/jaka_hand_A/AG-160-95-4a.bin",
+    "public/jaka_hand_A/AG-160-95-body.gltf",
+    "public/jaka_hand_A/AG-160-95-body.bin",
     "public/jaka_hand_A/update.json",
     "public/jaka_hand_A/linkmap.json",
     "public/jaka_hand_A/urdf.json",
 
-    "public/jaka_hand_B/AG-160-95-2b.glb",
-    "public/jaka_hand_B/AG-160-95-3b.glb",
-    "public/jaka_hand_B/AG-160-95-4b.glb",
-    "public/jaka_hand_B/update.json",
+    "public/jaka_hand_B/AG-160-95-2b.gltf",
+    "public/jaka_hand_B/AG-160-95-2b.bin",
+    "public/jaka_hand_B/AG-160-95-3b.gltf",
+    "public/jaka_hand_B/AG-160-95-3b.bin",
+    "public/jaka_hand_B/AG-160-95-4b.gltf",
+    "public/jaka_hand_B/AG-160-95-4b.bin",
+    "public/jaka_hand_B/update.jsotf",
+    "public/jaka_hand_B/update.jnin",
     "public/jaka_hand_B/linkmap.json",
     "public/jaka_hand_B/urdf.json"
   ],
@@ -59,7 +67,7 @@
   "dependencies": {
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
-    "@ucl-nuee/robot-loader": "file:../../robot-loader"
+    "@ucl-nuee/robot-loader": "https://github.com/TSUSAKA-ucl/robot-loader/releases/download/ver.1.0/ucl-nuee-robot-loader-1.0.4.tgz"
   },
   "devDependencies": {
     "@eslint/js": "^9.36.0",

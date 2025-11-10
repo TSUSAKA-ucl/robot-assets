@@ -8,7 +8,7 @@
 	} },
 	"geometry": {
           "mesh": { "$": {
-            "filename": "AG-160-95-body.glb"
+            "filename": "AG-160-95-body.gltf"
           }}}}
     ] },
   "finger1": {
@@ -20,7 +20,7 @@
 	} },
 	"geometry": {
           "mesh": { "$": {
-            "filename": "AG-160-95-2a.glb"
+            "filename": "AG-160-95-2a.gltf"
           } } }}
     ] },
   "finger2": {
@@ -32,7 +32,7 @@
 	} },
 	"geometry": {
           "mesh": { "$": {
-            "filename": "AG-160-95-3a.glb"
+            "filename": "AG-160-95-3a.gltf"
           } } }},
       {
 	"origin": { "$": {
@@ -40,7 +40,7 @@
 	} },
 	"geometry": {
           "mesh": { "$": {
-            "filename": "AG-160-95-4a.glb"
+            "filename": "AG-160-95-4a.gltf"
           } } }}
     ] }
 }
