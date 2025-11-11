@@ -1,0 +1,32 @@
+{
+  "name": "@ucl-nuee/kinova-gen3",
+  "version": "1.0.0",
+  "files": [
+    "public/kinova-gen3/base_link.dae.bin",
+    "public/kinova-gen3/base_link.dae.gltf",
+    "public/kinova-gen3/bracelet_no_vision_link.dae.bin",
+    "public/kinova-gen3/bracelet_no_vision_link.dae.gltf",
+    "public/kinova-gen3/forearm_link.dae.bin",
+    "public/kinova-gen3/forearm_link.dae.gltf",
+    "public/kinova-gen3/half_arm_1_link.dae.bin",
+    "public/kinova-gen3/half_arm_1_link.dae.gltf",
+    "public/kinova-gen3/half_arm_2_link.dae.bin",
+    "public/kinova-gen3/half_arm_2_link.dae.gltf",
+    "public/kinova-gen3/shoulder_link.dae.bin",
+    "public/kinova-gen3/shoulder_link.dae.gltf",
+    "public/kinova-gen3/spherical_wrist_1_link.dae.bin",
+    "public/kinova-gen3/spherical_wrist_1_link.dae.gltf",
+    "public/kinova-gen3/spherical_wrist_2_link.dae.bin",
+    "public/kinova-gen3/spherical_wrist_2_link.dae.gltf",
+    "public/kinova-gen3/linkmap.json",
+    "public/kinova-gen3/update.json",
+    "public/kinova-gen3/urdf.json"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "keywords": [],
+  "author": "Please change this part",
+  "license": "I won't mention this",
+  "description": "UCL private GLTF and JSON assets for this robot"
+}

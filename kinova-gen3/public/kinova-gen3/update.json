@@ -1,0 +1,226 @@
+{
+  "joint_1": {
+    "$": {
+      "type": "revolute"
+    }},
+  "joint_3": {
+    "$": {
+      "type": "revolute"
+    }},
+  "joint_5": {
+    "$": {
+      "type": "revolute"
+    }},
+  "joint_7": {
+    "$": {
+      "type": "revolute"
+    }},
+  "base_link": {
+    "visual": [
+      {
+	"origin": { "$": {
+          "rpy": [ 1.5707963267948966192, 0, 0 ],
+	  "xyz": [ 0, 0, 0 ]
+	}},
+        "geometry": {
+          "mesh": {
+            "$": {
+              "filename": "base_link.dae.gltf"
+            }
+          }
+        }
+      },
+      {
+        "geometry": {
+          "mesh": {
+            "$": {
+              "filename": "base_link.bbox.gltf"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "shoulder_link": {
+    "visual": [
+      {
+	"origin": { "$": {
+          "rpy": [ 1.5707963267948966192, 0, 0 ],
+	  "xyz": [ 0, 0, 0 ]
+	}},
+        "geometry": {
+          "mesh": {
+            "$": {
+              "filename": "shoulder_link.dae.gltf"
+            }
+          }
+        }
+      },
+      {
+        "geometry": {
+          "mesh": {
+            "$": {
+              "filename": "shoulder_link.bbox.gltf"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "half_arm_1_link": {
+    "visual": [
+      {
+	"origin": { "$": {
+          "rpy": [ 1.5707963267948966192, 0, 0 ],
+	  "xyz": [ 0, 0, 0 ]
+	}},
+        "geometry": {
+          "mesh": {
+            "$": {
+              "filename": "half_arm_1_link.dae.gltf"
+            }
+          }
+        }
+      },
+      {
+        "geometry": {
+          "mesh": {
+            "$": {
+              "filename": "half_arm_1_link.bbox.gltf"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "half_arm_2_link": {
+    "visual": [
+      {
+	"origin": { "$": {
+          "rpy": [ 1.5707963267948966192, 0, 0 ],
+	  "xyz": [ 0, 0, 0 ]
+	}},
+        "geometry": {
+          "mesh": {
+            "$": {
+              "filename": "half_arm_2_link.dae.gltf"
+            }
+          }
+        }
+      },
+      {
+        "geometry": {
+          "mesh": {
+            "$": {
+              "filename": "half_arm_2_link.bbox.gltf"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "forearm_link": {
+    "visual": [
+      {
+	"origin": { "$": {
+          "rpy": [ 1.5707963267948966192, 0, 0 ],
+	  "xyz": [ 0, 0, 0 ]
+	}},
+        "geometry": {
+          "mesh": {
+            "$": {
+              "filename": "forearm_link.dae.gltf"
+            }
+          }
+        }
+      },
+      {
+        "geometry": {
+          "mesh": {
+            "$": {
+              "filename": "forearm_link.bbox.gltf"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "spherical_wrist_1_link": {
+    "visual": [
+      {
+	"origin": { "$": {
+          "rpy": [ 1.5707963267948966192, 0, 0 ],
+	  "xyz": [ 0, 0, 0 ]
+	}},
+        "geometry": {
+          "mesh": {
+            "$": {
+              "filename": "spherical_wrist_1_link.dae.gltf"
+            }
+          }
+        }
+      },
+      {
+        "geometry": {
+          "mesh": {
+            "$": {
+              "filename": "spherical_wrist_1_link.bbox.gltf"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "spherical_wrist_2_link": {
+    "visual": [
+      {
+	"origin": { "$": {
+          "rpy": [ 1.5707963267948966192, 0, 0 ],
+	  "xyz": [ 0, 0, 0 ]
+	}},
+        "geometry": {
+          "mesh": {
+            "$": {
+              "filename": "spherical_wrist_2_link.dae.gltf"
+            }
+          }
+        }
+      },
+      {
+        "geometry": {
+          "mesh": {
+            "$": {
+              "filename": "spherical_wrist_2_link.bbox.gltf"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "bracelet_link": {
+    "visual": [
+      {
+	"origin": { "$": {
+          "rpy": [ 1.5707963267948966192, 0, 0 ],
+	  "xyz": [ 0, 0, 0 ]
+	}},
+        "geometry": {
+          "mesh": {
+            "$": {
+              "filename": "bracelet_no_vision_link.dae.gltf"
+            }
+          }
+        }
+      },
+      {
+        "geometry": {
+          "mesh": {
+            "$": {
+              "filename": "bracelet_no_vision_link.bbox.gltf"
+            }
+          }
+        }
+      }
+    ]
+  }
+}

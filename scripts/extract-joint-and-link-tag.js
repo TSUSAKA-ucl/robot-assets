@@ -69,7 +69,8 @@ argv._.forEach(filename => {
       fs.writeFileSync('linkmap.json', JSON.stringify(linkMap, null, 2));
       console.log('The link information was exported to linkmap.json');
       //
-      const myUpdate = Object.entries(linkMap).map(([name,value])=>{
+      const obj = {};
+      Object.entries(linkMap).forEach(([name,value])=>{
 	const visuals = value?.visual;
 	if (visuals) {
 	  // return [name, visuals?.geometry?.mesh?.$?.filename];
@@ -80,14 +81,15 @@ argv._.forEach(filename => {
 	  if (fname) {
 	    const mesh = fname+'.gltf';
 	    const bbox = fbase+'.bbox.gltf';
-	    return [name, {visual: [ {geometry: {mesh: {$:{filename: mesh.split('/').pop()}}}},
+	    obj[name] = {visual: [ {geometry: {mesh: {$:{filename: mesh.split('/').pop()}}}},
 				     {geometry: {mesh: {$:{filename: bbox.split('/').pop()}}}},
-				   ]}];
+				 ]};
 	  }
 	} else {
-	  return [name, visuals];
+	  obj[name] = visuals;
 	}
       });
+      const myUpdate = obj;
       fs.writeFileSync('update-stub.json', JSON.stringify(myUpdate, null, 2));
       console.log('recomended update.json stub was exported to update-stub.json');
    });

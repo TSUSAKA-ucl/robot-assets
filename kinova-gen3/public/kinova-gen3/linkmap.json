@@ -1,0 +1,753 @@
+{
+  "world": {
+    "$": {
+      "name": "world"
+    }
+  },
+  "base_link": {
+    "$": {
+      "name": "base_link"
+    },
+    "inertial": {
+      "origin": {
+        "$": {
+          "rpy": [
+            0,
+            0,
+            0
+          ],
+          "xyz": [
+            -0.000648,
+            -0.000166,
+            0.084487
+          ]
+        }
+      },
+      "mass": {
+        "$": {
+          "value": "1.697"
+        }
+      },
+      "inertia": {
+        "$": {
+          "ixx": "0.004622",
+          "ixy": "9E-06",
+          "ixz": "6E-05",
+          "iyy": "0.004495",
+          "iyz": "9E-06",
+          "izz": "0.002079"
+        }
+      }
+    },
+    "visual": {
+      "origin": {
+        "$": {
+          "rpy": [
+            0,
+            0,
+            0
+          ],
+          "xyz": [
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "geometry": {
+        "mesh": {
+          "$": {
+            "filename": "package://kortex_description/arms/gen3/7dof/meshes/base_link.dae"
+          }
+        }
+      },
+      "material": {
+        "$": {
+          "name": ""
+        },
+        "color": {
+          "$": {
+            "rgba": "0.75294 0.75294 0.75294 1"
+          }
+        }
+      }
+    },
+    "collision": {
+      "origin": {
+        "$": {
+          "rpy": [
+            0,
+            0,
+            0
+          ],
+          "xyz": [
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "geometry": {
+        "mesh": {
+          "$": {
+            "filename": "package://kortex_description/arms/gen3/7dof/meshes/base_link.dae"
+          }
+        }
+      }
+    }
+  },
+  "shoulder_link": {
+    "$": {
+      "name": "shoulder_link"
+    },
+    "inertial": {
+      "origin": {
+        "$": {
+          "rpy": [
+            0,
+            0,
+            0
+          ],
+          "xyz": [
+            -0.000023,
+            -0.010364,
+            -0.07336
+          ]
+        }
+      },
+      "mass": {
+        "$": {
+          "value": "1.3773"
+        }
+      },
+      "inertia": {
+        "$": {
+          "ixx": "0.00457",
+          "ixy": "1E-06",
+          "ixz": "2E-06",
+          "iyy": "0.004831",
+          "iyz": "0.000448",
+          "izz": "0.001409"
+        }
+      }
+    },
+    "visual": {
+      "origin": {
+        "$": {
+          "rpy": [
+            0,
+            0,
+            0
+          ],
+          "xyz": [
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "geometry": {
+        "mesh": {
+          "$": {
+            "filename": "package://kortex_description/arms/gen3/7dof/meshes/shoulder_link.dae"
+          }
+        }
+      },
+      "material": {
+        "$": {
+          "name": ""
+        },
+        "color": {
+          "$": {
+            "rgba": "0.75294 0.75294 0.75294 1"
+          }
+        }
+      }
+    },
+    "collision": {
+      "origin": {
+        "$": {
+          "rpy": [
+            0,
+            0,
+            0
+          ],
+          "xyz": [
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "geometry": {
+        "mesh": {
+          "$": {
+            "filename": "package://kortex_description/arms/gen3/7dof/meshes/shoulder_link.dae"
+          }
+        }
+      }
+    }
+  },
+  "half_arm_1_link": {
+    "$": {
+      "name": "half_arm_1_link"
+    },
+    "inertial": {
+      "origin": {
+        "$": {
+          "rpy": [
+            0,
+            0,
+            0
+          ],
+          "xyz": [
+            -0.000044,
+            -0.09958,
+            -0.013278
+          ]
+        }
+      },
+      "mass": {
+        "$": {
+          "value": "1.1636"
+        }
+      },
+      "inertia": {
+        "$": {
+          "ixx": "0.011088",
+          "ixy": "5E-06",
+          "ixz": "0",
+          "iyy": "0.001072",
+          "iyz": "-0.000691",
+          "izz": "0.011255"
+        }
+      }
+    },
+    "visual": {
+      "origin": {
+        "$": {
+          "rpy": [
+            0,
+            0,
+            0
+          ],
+          "xyz": [
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "geometry": {
+        "mesh": {
+          "$": {
+            "filename": "package://kortex_description/arms/gen3/7dof/meshes/half_arm_1_link.dae"
+          }
+        }
+      },
+      "material": {
+        "$": {
+          "name": ""
+        },
+        "color": {
+          "$": {
+            "rgba": "0.75294 0.75294 0.75294 1"
+          }
+        }
+      }
+    },
+    "collision": {
+      "origin": {
+        "$": {
+          "rpy": [
+            0,
+            0,
+            0
+          ],
+          "xyz": [
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "geometry": {
+        "mesh": {
+          "$": {
+            "filename": "package://kortex_description/arms/gen3/7dof/meshes/half_arm_1_link.dae"
+          }
+        }
+      }
+    }
+  },
+  "half_arm_2_link": {
+    "$": {
+      "name": "half_arm_2_link"
+    },
+    "inertial": {
+      "origin": {
+        "$": {
+          "rpy": [
+            0,
+            0,
+            0
+          ],
+          "xyz": [
+            -0.000044,
+            -0.006641,
+            -0.117892
+          ]
+        }
+      },
+      "mass": {
+        "$": {
+          "value": "1.1636"
+        }
+      },
+      "inertia": {
+        "$": {
+          "ixx": "0.010932",
+          "ixy": "0",
+          "ixz": "-7E-06",
+          "iyy": "0.011127",
+          "iyz": "0.000606",
+          "izz": "0.001043"
+        }
+      }
+    },
+    "visual": {
+      "origin": {
+        "$": {
+          "rpy": [
+            0,
+            0,
+            0
+          ],
+          "xyz": [
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "geometry": {
+        "mesh": {
+          "$": {
+            "filename": "package://kortex_description/arms/gen3/7dof/meshes/half_arm_2_link.dae"
+          }
+        }
+      },
+      "material": {
+        "$": {
+          "name": ""
+        },
+        "color": {
+          "$": {
+            "rgba": "0.75294 0.75294 0.75294 1"
+          }
+        }
+      }
+    },
+    "collision": {
+      "origin": {
+        "$": {
+          "rpy": [
+            0,
+            0,
+            0
+          ],
+          "xyz": [
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "geometry": {
+        "mesh": {
+          "$": {
+            "filename": "package://kortex_description/arms/gen3/7dof/meshes/half_arm_2_link.dae"
+          }
+        }
+      }
+    }
+  },
+  "forearm_link": {
+    "$": {
+      "name": "forearm_link"
+    },
+    "inertial": {
+      "origin": {
+        "$": {
+          "rpy": [
+            0,
+            0,
+            0
+          ],
+          "xyz": [
+            -0.000018,
+            -0.075478,
+            -0.015006
+          ]
+        }
+      },
+      "mass": {
+        "$": {
+          "value": "0.9302"
+        }
+      },
+      "inertia": {
+        "$": {
+          "ixx": "0.008147",
+          "ixy": "-1E-06",
+          "ixz": "0",
+          "iyy": "0.000631",
+          "iyz": "-0.0005",
+          "izz": "0.008316"
+        }
+      }
+    },
+    "visual": {
+      "origin": {
+        "$": {
+          "rpy": [
+            0,
+            0,
+            0
+          ],
+          "xyz": [
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "geometry": {
+        "mesh": {
+          "$": {
+            "filename": "package://kortex_description/arms/gen3/7dof/meshes/forearm_link.dae"
+          }
+        }
+      },
+      "material": {
+        "$": {
+          "name": ""
+        },
+        "color": {
+          "$": {
+            "rgba": "0.75294 0.75294 0.75294 1"
+          }
+        }
+      }
+    },
+    "collision": {
+      "origin": {
+        "$": {
+          "rpy": [
+            0,
+            0,
+            0
+          ],
+          "xyz": [
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "geometry": {
+        "mesh": {
+          "$": {
+            "filename": "package://kortex_description/arms/gen3/7dof/meshes/forearm_link.dae"
+          }
+        }
+      }
+    }
+  },
+  "spherical_wrist_1_link": {
+    "$": {
+      "name": "spherical_wrist_1_link"
+    },
+    "inertial": {
+      "origin": {
+        "$": {
+          "rpy": [
+            0,
+            0,
+            0
+          ],
+          "xyz": [
+            0.000001,
+            -0.009432,
+            -0.063883
+          ]
+        }
+      },
+      "mass": {
+        "$": {
+          "value": "0.6781"
+        }
+      },
+      "inertia": {
+        "$": {
+          "ixx": "0.001596",
+          "ixy": "0",
+          "ixz": "0",
+          "iyy": "0.001607",
+          "iyz": "0.000256",
+          "izz": "0.000399"
+        }
+      }
+    },
+    "visual": {
+      "origin": {
+        "$": {
+          "rpy": [
+            0,
+            0,
+            0
+          ],
+          "xyz": [
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "geometry": {
+        "mesh": {
+          "$": {
+            "filename": "package://kortex_description/arms/gen3/7dof/meshes/spherical_wrist_1_link.dae"
+          }
+        }
+      },
+      "material": {
+        "$": {
+          "name": ""
+        },
+        "color": {
+          "$": {
+            "rgba": "0.75294 0.75294 0.75294 1"
+          }
+        }
+      }
+    },
+    "collision": {
+      "origin": {
+        "$": {
+          "rpy": [
+            0,
+            0,
+            0
+          ],
+          "xyz": [
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "geometry": {
+        "mesh": {
+          "$": {
+            "filename": "package://kortex_description/arms/gen3/7dof/meshes/spherical_wrist_1_link.dae"
+          }
+        }
+      }
+    }
+  },
+  "spherical_wrist_2_link": {
+    "$": {
+      "name": "spherical_wrist_2_link"
+    },
+    "inertial": {
+      "origin": {
+        "$": {
+          "rpy": [
+            0,
+            0,
+            0
+          ],
+          "xyz": [
+            0.000001,
+            -0.045483,
+            -0.00965
+          ]
+        }
+      },
+      "mass": {
+        "$": {
+          "value": "0.6781"
+        }
+      },
+      "inertia": {
+        "$": {
+          "ixx": "0.001641",
+          "ixy": "0",
+          "ixz": "0",
+          "iyy": "0.00041",
+          "iyz": "-0.000278",
+          "izz": "0.001641"
+        }
+      }
+    },
+    "visual": {
+      "origin": {
+        "$": {
+          "rpy": [
+            0,
+            0,
+            0
+          ],
+          "xyz": [
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "geometry": {
+        "mesh": {
+          "$": {
+            "filename": "package://kortex_description/arms/gen3/7dof/meshes/spherical_wrist_2_link.dae"
+          }
+        }
+      },
+      "material": {
+        "$": {
+          "name": ""
+        },
+        "color": {
+          "$": {
+            "rgba": "0.75294 0.75294 0.75294 1"
+          }
+        }
+      }
+    },
+    "collision": {
+      "origin": {
+        "$": {
+          "rpy": [
+            0,
+            0,
+            0
+          ],
+          "xyz": [
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "geometry": {
+        "mesh": {
+          "$": {
+            "filename": "package://kortex_description/arms/gen3/7dof/meshes/spherical_wrist_2_link.dae"
+          }
+        }
+      }
+    }
+  },
+  "bracelet_link": {
+    "$": {
+      "name": "bracelet_link"
+    },
+    "inertial": {
+      "origin": {
+        "$": {
+          "rpy": [
+            0,
+            0,
+            0
+          ],
+          "xyz": [
+            -0.000093,
+            0.000132,
+            -0.022905
+          ]
+        }
+      },
+      "mass": {
+        "$": {
+          "value": "0.364"
+        }
+      },
+      "inertia": {
+        "$": {
+          "ixx": "0.000214",
+          "ixy": "0",
+          "ixz": "1E-06",
+          "iyy": "0.000223",
+          "iyz": "-2E-06",
+          "izz": "0.00024"
+        }
+      }
+    },
+    "visual": {
+      "origin": {
+        "$": {
+          "rpy": [
+            0,
+            0,
+            0
+          ],
+          "xyz": [
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "geometry": {
+        "mesh": {
+          "$": {
+            "filename": "package://kortex_description/arms/gen3/7dof/meshes/bracelet_no_vision_link.dae"
+          }
+        }
+      },
+      "material": {
+        "$": {
+          "name": ""
+        },
+        "color": {
+          "$": {
+            "rgba": "0.75294 0.75294 0.75294 1"
+          }
+        }
+      }
+    },
+    "collision": {
+      "origin": {
+        "$": {
+          "rpy": [
+            0,
+            0,
+            0
+          ],
+          "xyz": [
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "geometry": {
+        "mesh": {
+          "$": {
+            "filename": "package://kortex_description/arms/gen3/7dof/meshes/bracelet_no_vision_link.dae"
+          }
+        }
+      }
+    }
+  },
+  "end_effector_link": {
+    "$": {
+      "name": "end_effector_link"
+    }
+  },
+  "tool_frame": {
+    "$": {
+      "name": "tool_frame"
+    }
+  }
+}

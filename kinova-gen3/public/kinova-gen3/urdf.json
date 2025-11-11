@@ -1,0 +1,431 @@
+{
+  "base_joint": {
+    "$": {
+      "name": "base_joint",
+      "type": "fixed"
+    },
+    "origin": {
+      "$": {
+        "rpy": [
+          0,
+          0,
+          0
+        ],
+        "xyz": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "parent": {
+      "$": {
+        "link": "world"
+      }
+    },
+    "child": {
+      "$": {
+        "link": "base_link"
+      }
+    }
+  },
+  "joint_1": {
+    "$": {
+      "name": "joint_1",
+      "type": "continuous"
+    },
+    "origin": {
+      "$": {
+        "rpy": [
+          3.1416,
+          2.7629e-18,
+          -4.9305e-36
+        ],
+        "xyz": [
+          0,
+          0,
+          0.15643
+        ]
+      }
+    },
+    "parent": {
+      "$": {
+        "link": "base_link"
+      }
+    },
+    "child": {
+      "$": {
+        "link": "shoulder_link"
+      }
+    },
+    "axis": {
+      "$": {
+        "xyz": [
+          0,
+          0,
+          1
+        ]
+      }
+    },
+    "limit": {
+      "$": {
+        "effort": 39,
+        "velocity": 1.3963
+      }
+    }
+  },
+  "joint_2": {
+    "$": {
+      "name": "joint_2",
+      "type": "revolute"
+    },
+    "origin": {
+      "$": {
+        "rpy": [
+          1.5708,
+          2.1343e-17,
+          -1.1102e-16
+        ],
+        "xyz": [
+          0,
+          0.005375,
+          -0.12838
+        ]
+      }
+    },
+    "parent": {
+      "$": {
+        "link": "shoulder_link"
+      }
+    },
+    "child": {
+      "$": {
+        "link": "half_arm_1_link"
+      }
+    },
+    "axis": {
+      "$": {
+        "xyz": [
+          0,
+          0,
+          1
+        ]
+      }
+    },
+    "limit": {
+      "$": {
+        "effort": 39,
+        "lower": -2.24,
+        "upper": 2.24,
+        "velocity": 1.3963
+      }
+    }
+  },
+  "joint_3": {
+    "$": {
+      "name": "joint_3",
+      "type": "continuous"
+    },
+    "origin": {
+      "$": {
+        "rpy": [
+          -1.5708,
+          1.2326e-32,
+          -2.9122e-16
+        ],
+        "xyz": [
+          0,
+          -0.21038,
+          -0.006375
+        ]
+      }
+    },
+    "parent": {
+      "$": {
+        "link": "half_arm_1_link"
+      }
+    },
+    "child": {
+      "$": {
+        "link": "half_arm_2_link"
+      }
+    },
+    "axis": {
+      "$": {
+        "xyz": [
+          0,
+          0,
+          1
+        ]
+      }
+    },
+    "limit": {
+      "$": {
+        "effort": 39,
+        "velocity": 1.3963
+      }
+    }
+  },
+  "joint_4": {
+    "$": {
+      "name": "joint_4",
+      "type": "revolute"
+    },
+    "origin": {
+      "$": {
+        "rpy": [
+          1.5708,
+          -6.6954e-17,
+          -1.6653e-16
+        ],
+        "xyz": [
+          0,
+          0.006375,
+          -0.21038
+        ]
+      }
+    },
+    "parent": {
+      "$": {
+        "link": "half_arm_2_link"
+      }
+    },
+    "child": {
+      "$": {
+        "link": "forearm_link"
+      }
+    },
+    "axis": {
+      "$": {
+        "xyz": [
+          0,
+          0,
+          1
+        ]
+      }
+    },
+    "limit": {
+      "$": {
+        "effort": 39,
+        "lower": -2.57,
+        "upper": 2.57,
+        "velocity": 1.3963
+      }
+    }
+  },
+  "joint_5": {
+    "$": {
+      "name": "joint_5",
+      "type": "continuous"
+    },
+    "origin": {
+      "$": {
+        "rpy": [
+          -1.5708,
+          2.2204e-16,
+          -6.373e-17
+        ],
+        "xyz": [
+          0,
+          -0.20843,
+          -0.006375
+        ]
+      }
+    },
+    "parent": {
+      "$": {
+        "link": "forearm_link"
+      }
+    },
+    "child": {
+      "$": {
+        "link": "spherical_wrist_1_link"
+      }
+    },
+    "axis": {
+      "$": {
+        "xyz": [
+          0,
+          0,
+          1
+        ]
+      }
+    },
+    "limit": {
+      "$": {
+        "effort": 9,
+        "velocity": 1.2218
+      }
+    }
+  },
+  "joint_6": {
+    "$": {
+      "name": "joint_6",
+      "type": "revolute"
+    },
+    "origin": {
+      "$": {
+        "rpy": [
+          1.5708,
+          9.2076e-28,
+          -8.2157e-15
+        ],
+        "xyz": [
+          0,
+          0.00017505,
+          -0.10593
+        ]
+      }
+    },
+    "parent": {
+      "$": {
+        "link": "spherical_wrist_1_link"
+      }
+    },
+    "child": {
+      "$": {
+        "link": "spherical_wrist_2_link"
+      }
+    },
+    "axis": {
+      "$": {
+        "xyz": [
+          0,
+          0,
+          1
+        ]
+      }
+    },
+    "limit": {
+      "$": {
+        "effort": 9,
+        "lower": -2.09,
+        "upper": 2.09,
+        "velocity": 1.2218
+      }
+    }
+  },
+  "joint_7": {
+    "$": {
+      "name": "joint_7",
+      "type": "continuous"
+    },
+    "origin": {
+      "$": {
+        "rpy": [
+          -1.5708,
+          -5.5511e-17,
+          9.6396e-17
+        ],
+        "xyz": [
+          0,
+          -0.10593,
+          -0.00017505
+        ]
+      }
+    },
+    "parent": {
+      "$": {
+        "link": "spherical_wrist_2_link"
+      }
+    },
+    "child": {
+      "$": {
+        "link": "bracelet_link"
+      }
+    },
+    "axis": {
+      "$": {
+        "xyz": [
+          0,
+          0,
+          1
+        ]
+      }
+    },
+    "limit": {
+      "$": {
+        "effort": 9,
+        "velocity": 1.2218
+      }
+    }
+  },
+  "end_effector": {
+    "$": {
+      "name": "end_effector",
+      "type": "fixed"
+    },
+    "origin": {
+      "$": {
+        "rpy": [
+          3.14159265358979,
+          1.09937075168372e-32,
+          0
+        ],
+        "xyz": [
+          0,
+          0,
+          -0.0615250000000001
+        ]
+      }
+    },
+    "parent": {
+      "$": {
+        "link": "bracelet_link"
+      }
+    },
+    "child": {
+      "$": {
+        "link": "end_effector_link"
+      }
+    },
+    "axis": {
+      "$": {
+        "xyz": [
+          0,
+          0,
+          0
+        ]
+      }
+    }
+  },
+  "tool_frame_joint": {
+    "$": {
+      "name": "tool_frame_joint",
+      "type": "fixed"
+    },
+    "origin": {
+      "$": {
+        "rpy": [
+          0,
+          0,
+          0
+        ],
+        "xyz": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "parent": {
+      "$": {
+        "link": "end_effector_link"
+      }
+    },
+    "child": {
+      "$": {
+        "link": "tool_frame"
+      }
+    },
+    "axis": {
+      "$": {
+        "xyz": [
+          0,
+          0,
+          0
+        ]
+      }
+    }
+  }
+}
