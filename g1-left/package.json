@@ -1,0 +1,32 @@
+{
+  "name": "@ucl-nuee/g1-left",
+  "version": "1.0.0",
+  "files": [
+    "public/g1-left/left_elbow_link.STL.bin",
+    "public/g1-left/left_elbow_link.STL.gltf",
+    "public/g1-left/left_rubber_hand.STL.bin",
+    "public/g1-left/left_rubber_hand.STL.gltf",
+    "public/g1-left/left_shoulder_pitch_link.STL.bin",
+    "public/g1-left/left_shoulder_pitch_link.STL.gltf",
+    "public/g1-left/left_shoulder_roll_link.STL.bin",
+    "public/g1-left/left_shoulder_roll_link.STL.gltf",
+    "public/g1-left/left_shoulder_yaw_link.STL.bin",
+    "public/g1-left/left_shoulder_yaw_link.STL.gltf",
+    "public/g1-left/left_wrist_pitch_link.STL.bin",
+    "public/g1-left/left_wrist_pitch_link.STL.gltf",
+    "public/g1-left/left_wrist_roll_link.STL.bin",
+    "public/g1-left/left_wrist_roll_link.STL.gltf",
+    "public/g1-left/left_wrist_yaw_link.STL.bin",
+    "public/g1-left/left_wrist_yaw_link.STL.gltf",
+    "public/g1-left/linkmap.json",
+    "public/g1-left/update.json",
+    "public/g1-left/urdf.json"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "keywords": [],
+  "author": "Please change this part",
+  "license": "I won't mention this",
+  "description": "UCL private GLTF and JSON assets for this robot"
+}

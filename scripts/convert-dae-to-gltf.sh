@@ -9,7 +9,7 @@ elif [ ! -d out ]
 then echo './out is not a directory. exit!' 1>&2
      exit 1
 fi
-cat <<EOF >$PyScript
+cat <<EOF >"$PyScript"
 import bpy
 import sys
 import os
@@ -73,8 +73,7 @@ if __name__ == "__main__":
     main()
 EOF
 while [ $# -gt 0 ]
-do "$BLENDER" --background --python "$PySciprt" -- \
-	     --input "$1" \
-	     --output ./out/ || exit 1
+do echo "$BLENDER" --background --python "$PyScript" -- --input "$1" --output ./out/
+   "$BLENDER" --background --python "$PySciprt" -- --input "$1" --output ./out/
    shift
 done
