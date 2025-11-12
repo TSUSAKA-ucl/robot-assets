@@ -1,0 +1,158 @@
+{
+  "base_link": {
+    "visual": [
+      {
+	"origin": { "$": {
+          "rpy": [ 1.5707963267948966192, 0, 0 ],
+	  "xyz": [ 0, 0, 0 ]
+	}},
+        "geometry": {
+          "mesh": {
+            "$": {
+              "filename": "base_link.STL.gltf"
+            }
+          }
+        }
+      },
+      {
+        "geometry": {
+          "mesh": {
+            "$": {
+              "filename": "base_link.bbox.gltf"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "shoulder_link": {
+    "visual": [
+      {
+	"origin": { "$": {
+          "rpy": [ 1.5707963267948966192, 0, 0 ],
+	  "xyz": [ 0, 0, 0 ]
+	}},
+        "geometry": {
+          "mesh": {
+            "$": {
+              "filename": "shoulder_link.STL.gltf"
+            }
+          }
+        }
+      },
+      {
+        "geometry": {
+          "mesh": {
+            "$": {
+              "filename": "shoulder_link.bbox.gltf"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "arm_link": {
+    "visual": [
+      {
+	"origin": { "$": {
+          "rpy": [ 1.5707963267948966192, 0, 0 ],
+	  "xyz": [ 0, 0, 0 ]
+	}},
+        "geometry": {
+          "mesh": {
+            "$": {
+              "filename": "arm_link.STL.gltf"
+            }
+          }
+        }
+      },
+      {
+        "geometry": {
+          "mesh": {
+            "$": {
+              "filename": "arm_link.bbox.gltf"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "forearm_link": {
+    "visual": [
+      {
+	"origin": { "$": {
+          "rpy": [ 1.5707963267948966192, 0, 0 ],
+	  "xyz": [ 0, 0, 0 ]
+	}},
+        "geometry": {
+          "mesh": {
+            "$": {
+              "filename": "forearm_link.STL.gltf"
+            }
+          }
+        }
+      },
+      {
+        "geometry": {
+          "mesh": {
+            "$": {
+              "filename": "forearm_link.bbox.gltf"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "lower_wrist_link": {
+    "visual": [
+      {
+	"origin": { "$": {
+          "rpy": [ 1.5707963267948966192, 0, 0 ],
+	  "xyz": [ 0, 0, 0 ]
+	}},
+        "geometry": {
+          "mesh": {
+            "$": {
+              "filename": "lower_wrist_link.STL.gltf"
+            }
+          }
+        }
+      },
+      {
+        "geometry": {
+          "mesh": {
+            "$": {
+              "filename": "lower_wrist_link.bbox.gltf"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "upper_wrist_link": {
+    "visual": [
+      {
+	"origin": { "$": {
+          "rpy": [ 1.5707963267948966192, 0, 0 ],
+	  "xyz": [ 0, 0, 0 ]
+	}},
+        "geometry": {
+          "mesh": {
+            "$": {
+              "filename": "upper_wrist_link.STL.gltf"
+            }
+          }
+        }
+      },
+      {
+        "geometry": {
+          "mesh": {
+            "$": {
+              "filename": "upper_wrist_link.bbox.gltf"
+            }
+          }
+        }
+      }
+    ]
+  }
+}

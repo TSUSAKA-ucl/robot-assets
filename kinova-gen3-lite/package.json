@@ -1,0 +1,28 @@
+{
+  "name": "@ucl-nuee/kinova-gen3-lite",
+  "version": "1.0.0",
+  "files": [
+    "public/kinova-gen3-lite/arm_link.STL.bin",
+    "public/kinova-gen3-lite/arm_link.STL.gltf",
+    "public/kinova-gen3-lite/base_link.STL.bin",
+    "public/kinova-gen3-lite/base_link.STL.gltf",
+    "public/kinova-gen3-lite/forearm_link.STL.bin",
+    "public/kinova-gen3-lite/forearm_link.STL.gltf",
+    "public/kinova-gen3-lite/lower_wrist_link.STL.bin",
+    "public/kinova-gen3-lite/lower_wrist_link.STL.gltf",
+    "public/kinova-gen3-lite/shoulder_link.STL.bin",
+    "public/kinova-gen3-lite/shoulder_link.STL.gltf",
+    "public/kinova-gen3-lite/upper_wrist_link.STL.bin",
+    "public/kinova-gen3-lite/upper_wrist_link.STL.gltf",
+    "public/kinova-gen3-lite/linkmap.json",
+    "public/kinova-gen3-lite/update.json",
+    "public/kinova-gen3-lite/urdf.json"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "keywords": [],
+  "author": "Please change this part",
+  "license": "I won't mention this",
+  "description": "UCL private GLTF and JSON assets for this robot"
+}
