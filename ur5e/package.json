@@ -1,0 +1,48 @@
+{
+  "name": "@ucl-nuee/ur5e",
+  "version": "1.0.0",
+  "files": [
+    "public/ur5e/base.dae.bin",
+    "public/ur5e/base.dae.gltf",
+    "public/ur5e/forearm.dae.bin",
+    "public/ur5e/forearm.dae.gltf",
+    "public/ur5e/shoulder.dae.bin",
+    "public/ur5e/shoulder.dae.gltf",
+    "public/ur5e/upperarm.dae.bin",
+    "public/ur5e/upperarm.dae.gltf",
+    "public/ur5e/ur5e.urdf",
+    "public/ur5e/wrist1.dae.bin",
+    "public/ur5e/wrist1.dae.gltf",
+    "public/ur5e/wrist2.dae.bin",
+    "public/ur5e/wrist2.dae.gltf",
+    "public/ur5e/wrist3.dae.bin",
+    "public/ur5e/wrist3.dae.gltf",
+
+    "public/ur5e/base.bbox.bin",
+    "public/ur5e/base.bbox.gltf",
+    "public/ur5e/forearm.bbox.bin",
+    "public/ur5e/forearm.bbox.gltf",
+    "public/ur5e/shoulder.bbox.bin",
+    "public/ur5e/shoulder.bbox.gltf",
+    "public/ur5e/upperarm.bbox.bin",
+    "public/ur5e/upperarm.bbox.gltf",
+    "public/ur5e/wrist1.bbox.bin",
+    "public/ur5e/wrist1.bbox.gltf",
+    "public/ur5e/wrist2.bbox.bin",
+    "public/ur5e/wrist2.bbox.gltf",
+    "public/ur5e/wrist3.bbox.bin",
+    "public/ur5e/wrist3.bbox.gltf",
+
+    "public/ur5e/shapes.json",
+    "public/ur5e/update.json",
+    "public/ur5e/linkmap.json",
+    "public/ur5e/urdf.json"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "keywords": [],
+  "author": "Please change this part",
+  "license": "I won't mention this",
+  "description": "UCL private GLTF and JSON assets for this robot"
+}
