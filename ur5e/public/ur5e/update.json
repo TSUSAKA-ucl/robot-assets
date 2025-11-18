@@ -210,6 +210,16 @@
             }
           }
         }
+      },
+      {
+        "geometry": { "mesh": { "$": {
+          "filename": "CONVUM_SGE-M5-N-body-m.bbox.gltf"
+        }}}
+      },
+      {
+        "geometry": { "mesh": { "$": {
+          "filename": "CONVUM_SGE-M5-N-suction-m.bbox.gltf"
+        }}}
       }
     ]
   }

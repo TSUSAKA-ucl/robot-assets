@@ -1,6 +1,6 @@
 {
   "name": "@ucl-nuee/ur5e",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "files": [
     "public/ur5e/base.dae.bin",
     "public/ur5e/base.dae.gltf",
@@ -32,6 +32,11 @@
     "public/ur5e/wrist2.bbox.gltf",
     "public/ur5e/wrist3.bbox.bin",
     "public/ur5e/wrist3.bbox.gltf",
+
+    "public/ur5e/CONVUM_SGE-M5-N-body-m.bbox.bin",
+    "public/ur5e/CONVUM_SGE-M5-N-body-m.bbox.gltf",
+    "public/ur5e/CONVUM_SGE-M5-N-suction-m.bbox.bin",
+    "public/ur5e/CONVUM_SGE-M5-N-suction-m.bbox.gltf",
 
     "public/ur5e/shapes.json",
     "public/ur5e/update.json",
