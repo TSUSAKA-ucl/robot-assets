@@ -1,0 +1,66 @@
+{
+  "right_hand_palm_link": {
+    "visual": [
+    ]
+  },
+  "right_hand_middle_0_link": {
+    "visual": [
+      {
+	"origin": { "$": {
+          "rpy": [ 1.5707963267948966192, 0, 0 ],
+	  "xyz": [ 0, 0, 0 ]
+	}},
+        "geometry": {
+          "mesh": {
+            "$": {
+              "filename": "right_hand_middle_0_link.STL.gltf"
+            }
+          }
+        }
+      },
+      {
+	"origin": { "$": {
+          "rpy": [ 1.5707963267948966192, 0, 0 ],
+	  "xyz": [ 0, 0, 0 ]
+	}},
+        "geometry": {
+          "mesh": {
+            "$": {
+              "filename": "right_hand_middle_0_link.bbox.gltf"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "right_hand_middle_1_link": {
+    "visual": [
+      {
+	"origin": { "$": {
+          "rpy": [ 1.5707963267948966192, 0, 0 ],
+	  "xyz": [ 0, 0, 0 ]
+	}},
+        "geometry": {
+          "mesh": {
+            "$": {
+              "filename": "right_hand_middle_1_link.STL.gltf"
+            }
+          }
+        }
+      },
+      {
+	"origin": { "$": {
+          "rpy": [ 1.5707963267948966192, 0, 0 ],
+	  "xyz": [ 0, 0, 0 ]
+	}},
+        "geometry": {
+          "mesh": {
+            "$": {
+              "filename": "right_hand_middle_1_link.bbox.gltf"
+            }
+          }
+        }
+      }
+    ]
+  }
+}
