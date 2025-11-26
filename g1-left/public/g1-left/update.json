@@ -146,6 +146,19 @@
             }
           }
         }
+      },
+      {
+	"origin": { "$": {
+          "rpy": [ 1.5707963267948966192, 0, 0 ],
+	  "xyz": [ 0, 0, 0 ]
+	}},
+        "geometry": {
+          "mesh": {
+            "$": {
+              "filename": "left_shoulder_yaw_link.bbox2.gltf"
+            }
+          }
+        }
       }
     ]
   },
@@ -173,6 +186,19 @@
           "mesh": {
             "$": {
               "filename": "left_wrist_pitch_link.bbox.gltf"
+            }
+          }
+        }
+      },
+      {
+	"origin": { "$": {
+          "rpy": [ 1.5707963267948966192, 0, 0 ],
+	  "xyz": [ 0, 0, 0 ]
+	}},
+        "geometry": {
+          "mesh": {
+            "$": {
+              "filename": "left_wrist_pitch_link.bbox2.gltf"
             }
           }
         }
@@ -233,6 +259,19 @@
           "mesh": {
             "$": {
               "filename": "left_wrist_yaw_link.bbox.gltf"
+            }
+          }
+        }
+      },
+      {
+	"origin": { "$": {
+          "rpy": [ 1.5707963267948966192, 0, 0 ],
+	  "xyz": [ 0, 0, 0 ]
+	}},
+        "geometry": {
+          "mesh": {
+            "$": {
+              "filename": "left_hand_palm_link.bbox.gltf"
             }
           }
         }

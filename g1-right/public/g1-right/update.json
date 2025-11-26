@@ -236,6 +236,19 @@
             }
           }
         }
+      },
+      {
+	"origin": { "$": {
+          "rpy": [ 1.5707963267948966192, 0, 0 ],
+	  "xyz": [ 0, 0, 0 ]
+	}},
+        "geometry": {
+          "mesh": {
+            "$": {
+              "filename": "right_hand_palm_link.bbox.gltf"
+            }
+          }
+        }
       }
     ]
   },

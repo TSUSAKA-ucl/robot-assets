@@ -1,0 +1,117 @@
+{
+  "asset": {
+    "generator": "Khronos glTF Blender I/O v3.6.28",
+    "version": "2.0"
+  },
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0,
+      "name": "torso_link.bbox"
+    }
+  ],
+  "meshes": [
+    {
+      "name": "torso_link.bbox",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1
+          },
+          "indices": 2,
+          "material": 0
+        }
+      ]
+    }
+  ],
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 81,
+      "max": [
+        0.08675424754619598,
+        0.3070705533027649,
+        0.11168435215950012
+      ],
+      "min": [
+        -0.07247015833854675,
+        -0.016033053398132324,
+        -0.11297725141048431
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 81,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5123,
+      "count": 474,
+      "type": "SCALAR"
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 972,
+      "byteOffset": 0,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 972,
+      "byteOffset": 972,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 948,
+      "byteOffset": 1944,
+      "target": 34963
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 2892,
+      "uri": "torso_link.bbox.bin"
+    }
+  ],
+  "materials": [
+    {
+      "name": "DefaultMaterial",
+      "pbrMetallicRoughness": {
+        "metallicFactor": 0,
+        "baseColorFactor": [
+          1,
+          1,
+          1,
+          0.4
+        ]
+      },
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 1,
+          "specularColorFactor": [
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      "alphaMode": "BLEND"
+    }
+  ]
+}

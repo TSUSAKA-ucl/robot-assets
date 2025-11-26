@@ -32,6 +32,10 @@ def import_file(path):
         print(f"Importing STL: {path}")
         bpy.ops.wm.stl_import(filepath=path)
 
+    elif ext == ".ply":
+        print(f"Importing PLY: {path}")
+        bpy.ops.wm.ply_import(filepath=path)
+
     else:
         raise ValueError(f"Unsupported input format: {ext}")
 
@@ -57,8 +61,8 @@ def main():
     import_file(in_path)
 
     # Export filename
-    # base = os.path.splitext(os.path.basename(in_path))[0]
-    base = os.path.basename(in_path)
+    base = os.path.splitext(os.path.basename(in_path))[0]
+    # base = os.path.basename(in_path)
     gltf_path = os.path.join(out_dir, base + ".gltf")
 
     print(f"Exporting glTF (Separate): {gltf_path}")

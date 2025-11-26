@@ -1,0 +1,106 @@
+{
+  "asset": {
+    "generator": "Khronos glTF Blender I/O v3.6.28",
+    "version": "2.0"
+  },
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0,
+      "name": "left_shoulder_roll_link.bbox"
+    }
+  ],
+  "meshes": [
+    {
+      "name": "left_shoulder_roll_link.bbox",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1
+          },
+          "indices": 2,
+          "material": 0
+        }
+      ]
+    }
+  ],
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 556,
+      "max": [
+        0.03509170562028885,
+        -0.042799413204193115,
+        0.028926989063620567
+      ],
+      "min": [
+        -0.03549979254603386,
+        -0.07697691023349762,
+        -0.04209500923752785
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 556,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5123,
+      "count": 570,
+      "type": "SCALAR"
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 6672,
+      "byteOffset": 0,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 6672,
+      "byteOffset": 6672,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 1140,
+      "byteOffset": 13344,
+      "target": 34963
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 14484,
+      "uri": "left_shoulder_roll_link.bbox.bin"
+    }
+  ],
+  "materials": [
+    {
+      "name": "DefaultMaterial",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          1,
+          1,
+          1,
+          0.4
+        ]
+      },
+      "alphaMode": "BLEND"
+    }
+  ]
+}
