@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 //
 // joint定義mapのjsonから、parentプロパフィ(linK)の値がfromの要素から
 // childプロパティ(link)の値がtoの間だけを切り出す

@@ -1,5 +1,8 @@
 const fs = require("fs");
 const xml2js = require("xml2js");
+const path = require("path");
+const yargs = require("yargs/yargs");
+const { hideBin } = require("yargs/helpers");
 
 async function loadUrdf(path) {
   const xml = fs.readFileSync(path, "utf8");
@@ -68,7 +71,18 @@ function collectLinks(joints, chain) {
 }
 
 async function main() {
-  const robot = await loadUrdf("input.urdf");
+  const argv = yargs(hideBin(process.argv))
+	.usage('Usage: $0  <input urdf XML file>')
+	.option('output', {
+	  alias: 'o',
+	  describe: 'Output directory',
+	  default: '.',
+	})
+  	.demandCommand(1, 'You need to provide the input URDF file')
+  	.help()
+  	.argv;
+  const outputDir = argv.output;
+  const robot = await loadUrdf(path.resolve(argv._[0]));
   const { linkTags, joints, edges, childToJoint } = buildGraph(robot);
 
   const chains = extractChains(edges, childToJoint);
@@ -85,6 +99,8 @@ async function main() {
         joint: chain.map(j => joints[j])
       }
     };
+
+    process.chdir(outputDir);
 
     fs.writeFileSync(`chain_${i}.urdf`, builder.buildObject(out));
 

@@ -17,6 +17,14 @@ const fs = require('fs');
 const path = require("path");
 const yargs = require("yargs/yargs");
 const { hideBin } = require("yargs/helpers");
+const util = require('util');
+const { sortJointsByHierarchy,
+	convertToNumbers
+      } = require('./urdfSupports');
+const { eulerXYZToRotmat,
+	rotmatToEulerXYZ,
+	matrixMultiply
+      } = require('./eulerXYZ.js');
 
 // 引数パース
 const argv = yargs(hideBin(process.argv))
@@ -27,41 +35,69 @@ const argv = yargs(hideBin(process.argv))
 	default: false,
 	type: 'boolean'
       })
+      .option("select", {
+	alias: "c",
+	describe: "select only links that appear in joint map",
+	default: false,
+	type: 'boolean'
+      })
+      .option("urdfjson", {
+	alias: "j",
+	describe: "skip creating urdfmap.json and create only linkmap.json according to this option urdfjson",
+	default: '',
+	type: 'string'
+      })
       .demandCommand(1, "You must provide a URDF(XML) file")
       .help()
       .argv;
 
+const selectOnly = argv.select ? true : argv.urdfjson ? true : false;
 // const parser = new xml2js.Parser();
 const parser = new xml2js.Parser({explicitArray: false});
-const util = require('util');
 
 const keepKeys = ['joint','name','parent'];
 
 argv._.forEach(filename => {
   fs.readFile(filename, (err, data) => {
     parser.parseString(data, (err, result) => {
-      // console.log(JSON.stringify(result, null, 2));
-      // 不要なタグの削除
-      // delete result.root.unwantedTag;
-      const joint = result.robot.joint;
-      const filtered =
-	    // Object.fromEntries(
-	    // Object.entries(result.robot) //.filter(([key])=>keepKeys.includes(key))
-	    // result.robot.joint.every(entry=>keepKeys.includes(entry.$));
-	    // result.robot.joint.(entry=>"name" in entry.$ ? $ : );
+      const joints = 
 	    convertToNumbers(sortJointsByHierarchy(result.robot.joint));
-      const jointMap = Object.fromEntries(filtered.map((v) => [v.$.name,v]));
+      const jointMap = Object.fromEntries(joints.map((v) => [v.$.name,v]));
       // console.log(JSON.stringify(result.robot.joint,null,2));
-      // js出力
-      // console.log(util.inspect(filtered, { depth: null, colors: false }));
-      // JSON出力
-      const jointOutput = argv.sort ? filtered : jointMap;
-      const output = argv.sort ? 'urdfsorted.json' : 'urdfmap.json';
+      if (!argv.json) {
+	// js出力
+	// console.log(util.inspect(joints, { depth: null, colors: false }));
+	// JSON出力
+	const jointOutput = argv.sort ? joints : jointMap;
+	const output = argv.sort ? 'urdfsorted.json' : 'urdfmap.json';
 
-      fs.writeFileSync(output, JSON.stringify(jointOutput, null, 2));
-      console.log('The joint information was exported to',output);
+	fs.writeFileSync(output, JSON.stringify(jointOutput, null, 2));
+	console.log('The joint information was exported to',output);
+      }
       //
-      const links = convertToNumbers(result.robot.link)
+      let links = convertToNumbers(result.robot.link)
+      let selectMap = jointMap;
+      console.log('argv.urdfjson=',argv.urdfjson);
+      if (argv.urdfjson) {
+	try {
+	  const data = fs.readFileSync(argv.urdfjson, 'utf8');
+	  selectMap = JSON.parse(data);
+	  console.log('keys of selectMap:',Object.keys(selectMap));
+	} catch(err) {
+	  console.error('Failed to read urdfjson file:', argv.urdfjson);
+	  console.error('linkmap.json and update-stub.json were not created.');
+	  process.exit(1);
+	}
+      }
+      console.log('Total elements in selectMap:', Object.keys(selectMap).length);
+      if (selectOnly) {
+	// 存在するjoint.parent.$.linkとjoint.child.$.linkを集める
+	const selectKeys = Object.entries(selectMap).map(([jname,joint])=>{
+	  return [joint.parent.$.link, joint.child.$.link];
+	}).flat();
+	console.log('Selecting links:', selectKeys);
+	links = links.filter(link=>selectKeys.includes(link.$.name));
+      }
       const linkArray = Array.isArray(links) ? links : [links];
       const linkMap = Object.fromEntries(
 	linkArray.map(link => [link.$.name, link])
@@ -74,6 +110,21 @@ argv._.forEach(filename => {
 	const visuals = value?.visual;
 	if (visuals) {
 	  // return [name, visuals?.geometry?.mesh?.$?.filename];
+	  const origin = {};
+	  if (visuals?.origin?.$) {
+	    Object.assign(origin, visuals.origin.$);
+	  }
+	  if (origin.rpy) {
+	    const mat = eulerXYZToRotmat(
+	      origin.rpy[0], origin.rpy[1], origin.rpy[2]
+	    );
+	    const rotx90 = eulerXYZToRotmat(Math.PI/2, 0, 0);
+	    const newMat = matrixMultiply(mat, rotx90);
+	    const newRpy = rotmatToEulerXYZ(newMat);
+	    origin.rpy = [ newRpy.rx, newRpy.ry, newRpy.rz ];
+	  } else {
+	    origin.rpy = [ Math.PI/2, 0, 0 ];
+	  }
 	  const fname = visuals?.geometry?.mesh?.$?.filename;
 	  const parts = fname.split('.');
 	  parts.pop(); // remove last element i.e extension
@@ -81,9 +132,13 @@ argv._.forEach(filename => {
 	  if (fname) {
 	    const mesh = fname+'.gltf';
 	    const bbox = fbase+'.bbox.gltf';
-	    obj[name] = {visual: [ {geometry: {mesh: {$:{filename: mesh.split('/').pop()}}}},
-				     {geometry: {mesh: {$:{filename: bbox.split('/').pop()}}}},
-				 ]};
+	    const meshVisual = { geometry: {mesh: {$:{filename: mesh.split('/').pop()}}}};
+	    const bboxVisual = { geometry: {mesh: {$:{filename: bbox.split('/').pop()}}}};
+	    if (origin) { // origin must be always set
+	      meshVisual.origin = { $: origin };
+	      bboxVisual.origin = { $: origin };
+	    }
+	    obj[name] = {visual: [ meshVisual, bboxVisual ]};
 	  }
 	} else {
 	  obj[name] = visuals;
@@ -95,107 +150,3 @@ argv._.forEach(filename => {
    });
   });
 });
-
-function sortJointsByHierarchy(joints) {
-  // joint間の名前付き参照関係を構築
-  const graph = new Map(); // parent_link_name -> list of joints
-  const inDegree = new Map(); // child_link_name -> number of parents (for topological sort)
-
-  const linkToJoint = new Map(); // child link -> joint object (for ordered result)
-
-  joints.forEach(joint => {
-    const parent = joint.parent.$.link;
-    const child = joint.child.$.link;
-
-    // グラフ構築
-    if (!graph.has(parent)) graph.set(parent, []);
-    graph.get(parent).push(joint);
-
-    // in-degree count
-    inDegree.set(child, (inDegree.get(child) || 0) + 1);
-    if (!inDegree.has(parent)) inDegree.set(parent, 0); // ensure parent is included
-
-    // 紐づけ保存（任意）
-    linkToJoint.set(child, joint);
-  });
-
-  // in-degree = 0 のノードをキューに追加（ルート）
-  const queue = [];
-  for (const [link, degree] of inDegree.entries()) {
-    if (degree === 0) queue.push(link);
-  }
-
-  const orderedJoints = [];
-
-  while (queue.length > 0) {
-    const parentLink = queue.shift();
-    const children = graph.get(parentLink) || [];
-
-    for (const joint of children) {
-      const childLink = joint.child.$.link;
-      orderedJoints.push(joint);
-
-      inDegree.set(childLink, inDegree.get(childLink) - 1);
-      if (inDegree.get(childLink) === 0) {
-        queue.push(childLink);
-      }
-    }
-  }
-
-  // 結果チェック：並びきれなかった joint があれば警告
-  if (orderedJoints.length !== joints.length) {
-    console.warn("一部のjointが循環依存しているか、構造がおかしい可能性があります。");
-  }
-
-  return orderedJoints;
-}
-
-// 特定のキーのバリューを数値に変換する
-const convertToNumbers = function fnc(obj) {
-  const numericKeys = ['xyz', 'rpy', 'lower', 'upper', 'effort', 'velocity'];
-  if (Array.isArray(obj)) {
-    // 配列なら中身に再帰
-    return obj.map(fnc);
-  } else if (obj && typeof obj === 'object') {
-    // オブジェクトなら各キーを調べる
-    const result = {};
-    for (const [key, value] of Object.entries(obj)) {
-      if (numericKeys.includes(key) && typeof value === 'string') {
-        // const num = Number(value);
-        // result[key] = Number.isNaN(num) ? value : num;
-	const numbers = value.trim().split(/\s+/).map(Number);
-	result[key] = numbers.length === 1 ? numbers[0] : numbers;
-      } else {
-        result[key] = fnc(value); // 再帰
-      }
-    }
-    return result;
-  } else {
-    // プリミティブ（文字列や数値など）はそのまま
-    return obj;
-  }
-}
-
-function updateLeaves(a, b) {
-  for (const key in b) {
-    if (!(key in a)) continue; // aに存在しないキーは無視
-    const bVal = b[key];
-    const aVal = a[key];
-
-    if (
-      bVal !== null &&
-      typeof bVal === "object" &&
-      !Array.isArray(bVal) &&
-      aVal !== null &&
-      typeof aVal === "object" &&
-      !Array.isArray(aVal)
-    ) {
-      // 両方オブジェクトなら再帰
-      updateLeaves(aVal, bVal);
-    } else {
-      // 配列やオブジェクトでない値は上書き
-      a[key] = bVal;
-    }
-  }
-  return a;
-}

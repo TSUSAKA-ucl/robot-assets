@@ -1,11 +1,15 @@
 #!/bin/bash
-if readlink "$0" >/dev/null
-then ThisCmd=`readlink "$0"`
-else ThisCmd="$0"
-fi
-cd `dirname "$ThisCmd"`
+x="$0"
+y="$x"
+Here=`pwd -P`
+while [ -L "$x" ]
+do y="$x"
+   x=`readlink "$x"`
+   cd `dirname "$y"`
+done
+cd `dirname "$x"`
 ThisDir=`pwd -P`
-cd -
+cd "$Here"
 #
 #
 if [ "$BLENDER" = "" ]
