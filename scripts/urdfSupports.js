@@ -1,37 +1,6 @@
-#!/usr/bin/env node
-//
-// URDFのXMLから必要部分だけのJSONを作成する
-// 	CmdVelGeneratorのWASM版の初期化に使用するデータとして生成
-//
-// jointタグだけ抜き出して配列にし、親子関係でセマンティックソートし、
-// numericKeysに含まれるキーのvalueを数値に変換し、JSONで出力する
-//
-const xml2js = require('xml2js');
-const fs = require('fs');
-// const parser = new xml2js.Parser();
-const parser = new xml2js.Parser({explicitArray: false});
-const util = require('util');
-
-const keepKeys = ['joint','name','parent'];
-
-process.argv.slice(2).forEach(filename => {
-  fs.readFile(filename, (err, data) => {
-    parser.parseString(data, (err, result) => {
-      // console.log(JSON.stringify(result, null, 2));
-      // 不要なタグの削除
-      // delete result.root.unwantedTag;
-      const linkArray = convertToNumbers(result.robot.link);
-      const linkMap = Object.fromEntries(
-	linkArray.map(link => [link.$.name, link])
-      );
-      // console.log(JSON.stringify(result.robot.joint,null,2));
-      // js出力
-      // console.log(util.inspect(filtered, { depth: null, colors: false }));
-      // JSON出力
-      console.log(JSON.stringify(linkMap, null, 2));
-    });
-  });
-});
+// export sortJointsByHierarchy;
+// export convertToNumbers;
+// export updateLeaves;
 
 function sortJointsByHierarchy(joints) {
   // joint間の名前付き参照関係を構築
@@ -112,3 +81,33 @@ const convertToNumbers = function fnc(obj) {
     return obj;
   }
 }
+
+function updateLeaves(a, b) {
+  for (const key in b) {
+    if (!(key in a)) continue; // aに存在しないキーは無視
+    const bVal = b[key];
+    const aVal = a[key];
+
+    if (
+      bVal !== null &&
+      typeof bVal === "object" &&
+      !Array.isArray(bVal) &&
+      aVal !== null &&
+      typeof aVal === "object" &&
+      !Array.isArray(aVal)
+    ) {
+      // 両方オブジェクトなら再帰
+      updateLeaves(aVal, bVal);
+    } else {
+      // 配列やオブジェクトでない値は上書き
+      a[key] = bVal;
+    }
+  }
+  return a;
+}
+
+module.exports = {
+  sortJointsByHierarchy,
+  convertToNumbers,
+  updateLeaves
+};
