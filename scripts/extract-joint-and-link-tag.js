@@ -22,8 +22,10 @@ const { sortJointsByHierarchy,
 	convertToNumbers
       } = require('./urdfSupports');
 const { eulerXYZToRotmat,
+	eulerURDFToRotmat,
 	rotmatToEulerXYZ,
-	matrixMultiply
+	matrixMultiply,
+	transposeMatrix
       } = require('./eulerXYZ.js');
 
 // 引数パース
@@ -46,6 +48,12 @@ const argv = yargs(hideBin(process.argv))
 	describe: "skip creating urdfmap.json and create only linkmap.json according to this option urdfjson",
 	default: '',
 	type: 'string'
+      })
+      .option("no-colliders", {
+	alias: "n",
+	describe: "do not create collider shape descriptions in update-stub.json",
+	default: false,
+	type: 'boolean'
       })
       .demandCommand(1, "You must provide a URDF(XML) file")
       .help()
@@ -115,7 +123,7 @@ argv._.forEach(filename => {
 	    Object.assign(origin, visuals.origin.$);
 	  }
 	  if (origin.rpy) {
-	    const mat = eulerXYZToRotmat(
+	    const mat = eulerURDFToRotmat(
 	      origin.rpy[0], origin.rpy[1], origin.rpy[2]
 	    );
 	    const rotx90 = eulerXYZToRotmat(Math.PI/2, 0, 0);
@@ -138,7 +146,10 @@ argv._.forEach(filename => {
 	      meshVisual.origin = { $: origin };
 	      bboxVisual.origin = { $: origin };
 	    }
+	    if (!argv['no-colliders'])
 	    obj[name] = {visual: [ meshVisual, bboxVisual ]};
+	    else
+	    obj[name] = {visual: [meshVisual] };
 	  }
 	} else {
 	  obj[name] = visuals;

@@ -51,6 +51,32 @@ function eulerXYZToRotmat(rx, ry, rz) {
   ];
 }
 
+function eulerURDFToRotmat(roll, pitch, yaw) {
+  const c1 = Math.cos(roll);
+  const s1 = Math.sin(roll);
+  const c2 = Math.cos(pitch);
+  const s2 = Math.sin(pitch);
+  const c3 = Math.cos(yaw);
+  const s3 = Math.sin(yaw);
+
+  const m00 = c2 * c3;
+  const m01 = c3*s1*s2 - c1*s3;
+  const m02 = s1*s3 + c1*c3*s2;
+  const m10 = c2 * s3;
+  const m11 = c1 * c3 + s1 * s2 * s3;
+  const m12 = c1 * s2 * s3 - c3 * s1;
+  const m20 = -s2;
+  const m21 = c2 * s1;
+  const m22 = c1 * c2;
+
+  return [
+    [m00, m01, m02],
+    [m10, m11, m12],
+    [m20, m21, m22]
+  ];
+}
+
+
 function matrixMultiply(a, b) {
   const result = [];
   for (let i = 0; i < a.length; i++) {
@@ -66,9 +92,21 @@ function matrixMultiply(a, b) {
   return result;
 }
 
+function transposeMatrix(m) {
+  const result = [];
+  for (let i = 0; i < m[0].length; i++) {
+    result[i] = [];
+    for (let j = 0; j < m.length; j++) {
+      result[i][j] = m[j][i];
+    }
+  }
+  return result;
+}
 
 module.exports = {
   eulerXYZToRotmat,
+  eulerURDFToRotmat,
   rotmatToEulerXYZ,
-  matrixMultiply
+  matrixMultiply,
+  transposeMatrix
 };
