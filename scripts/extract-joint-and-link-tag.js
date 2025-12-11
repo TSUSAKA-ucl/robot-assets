@@ -24,6 +24,7 @@ const { sortJointsByHierarchy,
 const { eulerXYZToRotmat,
 	eulerURDFToRotmat,
 	rotmatToEulerXYZ,
+	changeRpyUrdfToThree,
 	matrixMultiply,
 	transposeMatrix
       } = require('./eulerXYZ.js');
@@ -79,7 +80,9 @@ argv._.forEach(filename => {
 	const jointOutput = argv.sort ? joints : jointMap;
 	const output = argv.sort ? 'urdfsorted.json' : 'urdfmap.json';
 
-	fs.writeFileSync(output, JSON.stringify(jointOutput, null, 2));
+	fs.writeFileSync(output,
+			 JSON.stringify(changeRpyUrdfToThree(jointOutput),
+					null, 2));
 	console.log('The joint information was exported to',output);
       }
       //
@@ -110,7 +113,9 @@ argv._.forEach(filename => {
       const linkMap = Object.fromEntries(
 	linkArray.map(link => [link.$.name, link])
       );
-      fs.writeFileSync('linkmap.json', JSON.stringify(linkMap, null, 2));
+      fs.writeFileSync('linkmap.json',
+		       JSON.stringify(changeRpyUrdfToThree(linkMap),
+				      null, 2));
       console.log('The link information was exported to linkmap.json');
       //
       const obj = {};
@@ -138,7 +143,8 @@ argv._.forEach(filename => {
 	  parts.pop(); // remove last element i.e extension
 	  const fbase = parts.join('.');
 	  if (fname) {
-	    const mesh = fname+'.gltf';
+	    // const mesh = fname+'.gltf';
+	    const mesh = fbase+'.gltf';
 	    const bbox = fbase+'.bbox.gltf';
 	    const meshVisual = { geometry: {mesh: {$:{filename: mesh.split('/').pop()}}}};
 	    const bboxVisual = { geometry: {mesh: {$:{filename: bbox.split('/').pop()}}}};

@@ -103,10 +103,39 @@ function transposeMatrix(m) {
   return result;
 }
 
+function changeRpyUrdfToThree(obj) {
+  if (obj === null || typeof obj !== 'object') return obj;
+  if (Array.isArray(obj)) {
+    return obj.map(e => changeRpyUrdfToThree(e));
+  }
+  if (obj?.origin?.$) {
+    const {origin, ...rest} = obj;
+    const result = changeRpyUrdfToThree(rest);
+    const {$, ...otherAttrs} = origin;
+    result.origin = changeRpyUrdfToThree(otherAttrs);
+    const {rpy, ...rpyRest} = $;
+    result.origin.$ = changeRpyUrdfToThree(rpyRest);
+    if (Array.isArray(rpy) && rpy.length === 3 &&
+	rpy.every(e => Number.isFinite(e))) {
+      const mat = eulerURDFToRotmat(rpy[0], rpy[1], rpy[2]);
+      const newRpy = rotmatToEulerXYZ(mat);
+      result.origin.$.rpy = [ newRpy.rx, newRpy.ry, newRpy.rz ];
+    } else {
+      result.origin.$.rpy = rpy;
+    }
+    return result;
+  } else {
+    return Object.fromEntries(
+      Object.entries(obj).map(([k,v])=>[k, changeRpyUrdfToThree(v)])
+    );
+  }
+}
+
 module.exports = {
   eulerXYZToRotmat,
   eulerURDFToRotmat,
   rotmatToEulerXYZ,
+  changeRpyUrdfToThree,
   matrixMultiply,
   transposeMatrix
 };
