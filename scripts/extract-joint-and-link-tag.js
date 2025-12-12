@@ -120,45 +120,52 @@ argv._.forEach(filename => {
       //
       const obj = {};
       Object.entries(linkMap).forEach(([name,value])=>{
-	const visuals = value?.visual;
-	if (visuals) {
-	  // return [name, visuals?.geometry?.mesh?.$?.filename];
-	  const origin = {};
-	  if (visuals?.origin?.$) {
-	    Object.assign(origin, visuals.origin.$);
-	  }
-	  if (origin.rpy) {
-	    const mat = eulerURDFToRotmat(
-	      origin.rpy[0], origin.rpy[1], origin.rpy[2]
-	    );
-	    const rotx90 = eulerXYZToRotmat(Math.PI/2, 0, 0);
-	    const newMat = matrixMultiply(mat, rotx90);
-	    const newRpy = rotmatToEulerXYZ(newMat);
-	    origin.rpy = [ newRpy.rx, newRpy.ry, newRpy.rz ];
-	  } else {
-	    origin.rpy = [ Math.PI/2, 0, 0 ];
-	  }
-	  const fname = visuals?.geometry?.mesh?.$?.filename;
-	  const parts = fname.split('.');
-	  parts.pop(); // remove last element i.e extension
-	  const fbase = parts.join('.');
-	  if (fname) {
-	    // const mesh = fname+'.gltf';
-	    const mesh = fbase+'.gltf';
-	    const bbox = fbase+'.bbox.gltf';
-	    const meshVisual = { geometry: {mesh: {$:{filename: mesh.split('/').pop()}}}};
-	    const bboxVisual = { geometry: {mesh: {$:{filename: bbox.split('/').pop()}}}};
-	    if (origin) { // origin must be always set
-	      meshVisual.origin = { $: origin };
-	      bboxVisual.origin = { $: origin };
+	if (value?.visual) {
+	  const visuals = Array.isArray(value?.visual) ? value?.visual :
+		[ value?.visual ];
+	  const newVisual = [];
+	  visuals.forEach((visual)=>{
+	    console.log('processing update for link:', name);
+	    const origin = {};
+	    if (visual?.origin?.$) {
+	      Object.assign(origin, visual.origin.$);
 	    }
-	    if (!argv['no-colliders'])
-	    obj[name] = {visual: [ meshVisual, bboxVisual ]};
-	    else
-	    obj[name] = {visual: [meshVisual] };
-	  }
+	    if (origin.rpy) {
+	      const mat = eulerURDFToRotmat(
+		origin.rpy[0], origin.rpy[1], origin.rpy[2]
+	      );
+	      const rotx90 = eulerXYZToRotmat(Math.PI/2, 0, 0);
+	      const newMat = matrixMultiply(mat, rotx90);
+	      const newRpy = rotmatToEulerXYZ(newMat);
+	      origin.rpy = [ newRpy.rx, newRpy.ry, newRpy.rz ];
+	    } else {
+	      origin.rpy = [ Math.PI/2, 0, 0 ];
+	    }
+	    const fname = visual?.geometry?.mesh?.$?.filename;
+	    if (fname) {
+	      const parts = fname.split('.');
+	      parts.pop(); // remove last element i.e extension
+	      const fbase = parts.join('.');
+	      // const mesh = fname+'.gltf';
+	      const mesh = fbase+'.gltf';
+	      const bbox = fbase+'.bbox.gltf';
+	      const meshVisual = { geometry: {mesh: {$:{filename: mesh.split('/').pop()}}}};
+	      const bboxVisual = { geometry: {mesh: {$:{filename: bbox.split('/').pop()}}}};
+	      if (origin) { // origin must be always set
+		meshVisual.origin = { $: origin };
+		bboxVisual.origin = { $: origin };
+	      }
+	      newVisual.push(meshVisual);
+	      if (!argv['no-colliders']) {
+		newVisual.push(bboxVisual);
+	      }
+	    } else {
+	      newVisual.push(visual);
+	    }
+	  });
+	  obj[name] = { visual: newVisual };
 	} else {
-	  obj[name] = visuals;
+	  obj[name] = value;
 	}
       });
       const myUpdate = obj;
