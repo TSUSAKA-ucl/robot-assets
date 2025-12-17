@@ -1,0 +1,859 @@
+{
+  "body_link": {
+    "$": {
+      "name": "body_link"
+    },
+    "visual": {
+      "geometry": {
+        "mesh": {
+          "$": {
+            "filename": "package://sciurus17_description/meshes/visual/Body.stl",
+            "scale": "1.0 1.0 1.0"
+          }
+        }
+      },
+      "material": {
+        "$": {
+          "name": "white"
+        }
+      }
+    },
+    "collision": {
+      "geometry": {
+        "mesh": {
+          "$": {
+            "filename": "package://sciurus17_description/meshes/collision/Body.stl",
+            "scale": "1.0 1.0 1.0"
+          }
+        }
+      },
+      "origin": {
+        "$": {
+          "xyz": [
+            0,
+            0,
+            0
+          ],
+          "rpy": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "inertial": {
+      "inertia": {
+        "$": {
+          "ixx": "15601031.58e-09",
+          "ixy": "-15890.903e-09",
+          "ixz": "-3805596.494e-09",
+          "iyy": "13969734.5e-09",
+          "iyz": "-20695.221e-09",
+          "izz": "8327993.097e-09"
+        }
+      },
+      "mass": {
+        "$": {
+          "value": "1482.929e-03"
+        }
+      },
+      "origin": {
+        "$": {
+          "xyz": [
+            0.05711,
+            0.000372,
+            0.238229
+          ],
+          "rpy": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    }
+  },
+  "r_link1": {
+    "$": {
+      "name": "r_link1"
+    },
+    "visual": {
+      "geometry": {
+        "mesh": {
+          "$": {
+            "filename": "package://sciurus17_description/meshes/visual/R_Link1.stl",
+            "scale": "1.0 1.0 1.0"
+          }
+        }
+      },
+      "material": {
+        "$": {
+          "name": "white"
+        }
+      },
+      "origin": {
+        "$": {
+          "xyz": [
+            0,
+            0,
+            0
+          ],
+          "rpy": [
+            1.5708,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "collision": {
+      "geometry": {
+        "mesh": {
+          "$": {
+            "filename": "package://sciurus17_description/meshes/collision/R_Link1.stl",
+            "scale": "1.0 1.0 1.0"
+          }
+        }
+      },
+      "origin": {
+        "$": {
+          "xyz": [
+            0,
+            0,
+            0
+          ],
+          "rpy": [
+            1.5708,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "inertial": {
+      "inertia": {
+        "$": {
+          "ixx": "176217.476e-09",
+          "ixy": "-5.425e-09",
+          "ixz": "586.979e-09",
+          "iyy": "179207.793e-09",
+          "iyz": "-166.297e-09",
+          "izz": "87950.071e-09"
+        }
+      },
+      "mass": {
+        "$": {
+          "value": "258.0e-03"
+        }
+      },
+      "origin": {
+        "$": {
+          "xyz": [
+            -0.000656,
+            -0.046367,
+            -0.000264
+          ],
+          "rpy": [
+            1.5708,
+            0,
+            0
+          ]
+        }
+      }
+    }
+  },
+  "r_link2": {
+    "$": {
+      "name": "r_link2"
+    },
+    "visual": {
+      "geometry": {
+        "mesh": {
+          "$": {
+            "filename": "package://sciurus17_description/meshes/visual/R_Link2.stl",
+            "scale": "1.0 1.0 1.0"
+          }
+        }
+      },
+      "material": {
+        "$": {
+          "name": "white"
+        }
+      },
+      "origin": {
+        "$": {
+          "xyz": [
+            0,
+            0,
+            0
+          ],
+          "rpy": [
+            0,
+            1.5707963267948966,
+            0
+          ]
+        }
+      }
+    },
+    "collision": {
+      "geometry": {
+        "mesh": {
+          "$": {
+            "filename": "package://sciurus17_description/meshes/collision/R_Link2.stl",
+            "scale": "1.0 1.0 1.0"
+          }
+        }
+      },
+      "origin": {
+        "$": {
+          "xyz": [
+            0,
+            0,
+            0
+          ],
+          "rpy": [
+            0,
+            1.5707963267948966,
+            0
+          ]
+        }
+      }
+    },
+    "inertial": {
+      "inertia": {
+        "$": {
+          "ixx": "172046.031e-09",
+          "ixy": "-119.176e-09",
+          "ixz": "-535.109e-09",
+          "iyy": "98834.156e-09",
+          "iyz": "580.743e-09",
+          "izz": "136915.218e-09"
+        }
+      },
+      "mass": {
+        "$": {
+          "value": "134.0e-03"
+        }
+      },
+      "origin": {
+        "$": {
+          "xyz": [
+            -0.000185,
+            -0.03396,
+            -0.000033
+          ],
+          "rpy": [
+            0,
+            1.5707963267948966,
+            0
+          ]
+        }
+      }
+    }
+  },
+  "r_link3": {
+    "$": {
+      "name": "r_link3"
+    },
+    "visual": {
+      "geometry": {
+        "mesh": {
+          "$": {
+            "filename": "package://sciurus17_description/meshes/visual/L_Link3.stl",
+            "scale": "1.0 1.0 1.0"
+          }
+        }
+      },
+      "material": {
+        "$": {
+          "name": "white"
+        }
+      },
+      "origin": {
+        "$": {
+          "xyz": [
+            0,
+            0,
+            0
+          ],
+          "rpy": [
+            1.5708,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "collision": {
+      "geometry": {
+        "mesh": {
+          "$": {
+            "filename": "package://sciurus17_description/meshes/collision/L_Link3.stl",
+            "scale": "1.0 1.0 1.0"
+          }
+        }
+      },
+      "origin": {
+        "$": {
+          "xyz": [
+            0,
+            0,
+            0
+          ],
+          "rpy": [
+            1.5708,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "inertial": {
+      "inertia": {
+        "$": {
+          "ixx": "2336253.636e-09",
+          "ixy": "-1190.372e-09",
+          "ixz": "-75998.279e-09",
+          "iyy": "2414711.907e-09",
+          "iyz": "-8024.912e-09",
+          "izz": "236305.543e-09"
+        }
+      },
+      "mass": {
+        "$": {
+          "value": "443.0e-03"
+        }
+      },
+      "origin": {
+        "$": {
+          "xyz": [
+            -0.013791,
+            -0.113391,
+            0.000245
+          ],
+          "rpy": [
+            1.5708,
+            0,
+            0
+          ]
+        }
+      }
+    }
+  },
+  "r_link4": {
+    "$": {
+      "name": "r_link4"
+    },
+    "visual": {
+      "geometry": {
+        "mesh": {
+          "$": {
+            "filename": "package://sciurus17_description/meshes/visual/R_Link4.stl",
+            "scale": "1.0 1.0 1.0"
+          }
+        }
+      },
+      "material": {
+        "$": {
+          "name": "white"
+        }
+      },
+      "origin": {
+        "$": {
+          "xyz": [
+            0,
+            0,
+            0
+          ],
+          "rpy": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "collision": {
+      "geometry": {
+        "mesh": {
+          "$": {
+            "filename": "package://sciurus17_description/meshes/collision/R_Link4.stl",
+            "scale": "1.0 1.0 1.0"
+          }
+        }
+      },
+      "origin": {
+        "$": {
+          "xyz": [
+            0,
+            0,
+            0
+          ],
+          "rpy": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "inertial": {
+      "inertia": {
+        "$": {
+          "ixx": "603280.74e-09",
+          "ixy": "-6670.94e-09",
+          "ixz": "250.846e-09",
+          "iyy": "143154.3e-09",
+          "iyz": "-2309.247e-09",
+          "izz": "598152.333e-09"
+        }
+      },
+      "mass": {
+        "$": {
+          "value": "238.0e-03"
+        }
+      },
+      "origin": {
+        "$": {
+          "xyz": [
+            -0.008881,
+            -0.075749,
+            0.000038
+          ],
+          "rpy": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    }
+  },
+  "r_link5": {
+    "$": {
+      "name": "r_link5"
+    },
+    "visual": [
+      {
+        "geometry": {
+          "mesh": {
+            "$": {
+              "filename": "package://sciurus17_description/meshes/visual/R_Link5.stl",
+              "scale": "1.0 1.0 1.0"
+            }
+          }
+        },
+        "material": {
+          "$": {
+            "name": "white"
+          }
+        },
+        "origin": {
+          "$": {
+            "xyz": [
+              0,
+              0,
+              0
+            ],
+            "rpy": [
+              1.5708,
+              0,
+              0
+            ]
+          }
+        }
+      },
+      {
+        "geometry": {
+          "mesh": {
+            "$": {
+              "filename": "package://sciurus17_description/meshes/visual/Logo_Rabbit.stl",
+              "scale": "1.0 1.0 1.0"
+            }
+          }
+        },
+        "material": {
+          "$": {
+            "name": "red_color"
+          },
+          "color": {
+            "$": {
+              "rgba": "0.8984375 0.0 0.0703125 1"
+            }
+          }
+        },
+        "origin": {
+          "$": {
+            "xyz": [
+              0.032,
+              -0.074,
+              0.0345
+            ],
+            "rpy": [
+              0,
+              0,
+              -2.0944
+            ]
+          }
+        }
+      },
+      {
+        "geometry": {
+          "mesh": {
+            "$": {
+              "filename": "package://sciurus17_description/meshes/visual/Logo_Corp.stl",
+              "scale": "1.0 1.0 1.0"
+            }
+          }
+        },
+        "material": {
+          "$": {
+            "name": "black_color"
+          },
+          "color": {
+            "$": {
+              "rgba": "0.2 0.2 0.2 1"
+            }
+          }
+        },
+        "origin": {
+          "$": {
+            "xyz": [
+              0.013,
+              -0.107,
+              0.0345
+            ],
+            "rpy": [
+              0,
+              0,
+              -2.0944
+            ]
+          }
+        }
+      }
+    ],
+    "collision": {
+      "geometry": {
+        "mesh": {
+          "$": {
+            "filename": "package://sciurus17_description/meshes/collision/R_Link5.stl",
+            "scale": "1.0 1.0 1.0"
+          }
+        }
+      },
+      "origin": {
+        "$": {
+          "xyz": [
+            0,
+            0,
+            0
+          ],
+          "rpy": [
+            1.5708,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "inertial": {
+      "inertia": {
+        "$": {
+          "ixx": "294726.731e-09",
+          "ixy": "-4809.196e-09",
+          "ixz": "-21387.985e-09",
+          "iyy": "290568.087e-09",
+          "iyz": "13192.269e-09",
+          "izz": "125378.656e-09"
+        }
+      },
+      "mass": {
+        "$": {
+          "value": "224.0e-03"
+        }
+      },
+      "origin": {
+        "$": {
+          "xyz": [
+            0.013531,
+            -0.070369,
+            -0.000304
+          ],
+          "rpy": [
+            1.5708,
+            0,
+            0
+          ]
+        }
+      }
+    }
+  },
+  "r_link6": {
+    "$": {
+      "name": "r_link6"
+    },
+    "visual": {
+      "geometry": {
+        "mesh": {
+          "$": {
+            "filename": "package://sciurus17_description/meshes/visual/R_Link6.stl",
+            "scale": "1.0 1.0 1.0"
+          }
+        }
+      },
+      "material": {
+        "$": {
+          "name": "white"
+        }
+      },
+      "origin": {
+        "$": {
+          "xyz": [
+            0,
+            0,
+            0
+          ],
+          "rpy": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "collision": {
+      "geometry": {
+        "mesh": {
+          "$": {
+            "filename": "package://sciurus17_description/meshes/collision/R_Link6.stl",
+            "scale": "1.0 1.0 1.0"
+          }
+        }
+      },
+      "origin": {
+        "$": {
+          "xyz": [
+            0,
+            0,
+            0
+          ],
+          "rpy": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "inertial": {
+      "inertia": {
+        "$": {
+          "ixx": "39499.661e-09",
+          "ixy": "-2921.88e-09",
+          "ixz": "-612.042e-09",
+          "iyy": "60684.342e-09",
+          "iyz": "357.397e-09",
+          "izz": "73112.015e-09"
+        }
+      },
+      "mass": {
+        "$": {
+          "value": "140.0e-03"
+        }
+      },
+      "origin": {
+        "$": {
+          "xyz": [
+            -0.006156,
+            0.003583,
+            0.000755
+          ],
+          "rpy": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    }
+  },
+  "r_link7": {
+    "$": {
+      "name": "r_link7"
+    },
+    "visual": {
+      "geometry": {
+        "mesh": {
+          "$": {
+            "filename": "package://sciurus17_description/meshes/visual/R_Link7.stl",
+            "scale": "1.0 1.0 1.0"
+          }
+        }
+      },
+      "material": {
+        "$": {
+          "name": "red"
+        }
+      },
+      "origin": {
+        "$": {
+          "xyz": [
+            0,
+            0,
+            0
+          ],
+          "rpy": [
+            1.5708,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "collision": {
+      "geometry": {
+        "mesh": {
+          "$": {
+            "filename": "package://sciurus17_description/meshes/collision/R_Link7.stl",
+            "scale": "1.0 1.0 1.0"
+          }
+        }
+      },
+      "origin": {
+        "$": {
+          "xyz": [
+            0,
+            0,
+            0
+          ],
+          "rpy": [
+            1.5708,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "inertial": {
+      "inertia": {
+        "$": {
+          "ixx": "32600.928e-09",
+          "ixy": "-69.84e-09",
+          "ixz": "-254.224e-09",
+          "iyy": "41969.484e-09",
+          "iyz": "-409.16e-09",
+          "izz": "43040.018e-09"
+        }
+      },
+      "mass": {
+        "$": {
+          "value": "121.0e-03"
+        }
+      },
+      "origin": {
+        "$": {
+          "xyz": [
+            -0.000118,
+            -0.02065,
+            0.001006
+          ],
+          "rpy": [
+            1.5708,
+            0,
+            0
+          ]
+        }
+      }
+    }
+  },
+  "r_gripperB_link": {
+    "$": {
+      "name": "r_gripperB_link"
+    },
+    "visual": {
+      "geometry": {
+        "mesh": {
+          "$": {
+            "filename": "package://sciurus17_description/meshes/visual/R_GripperB.stl",
+            "scale": "1.0 1.0 1.0"
+          }
+        }
+      },
+      "material": {
+        "$": {
+          "name": "red"
+        }
+      },
+      "origin": {
+        "$": {
+          "xyz": [
+            0,
+            0,
+            0
+          ],
+          "rpy": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "collision": {
+      "geometry": {
+        "mesh": {
+          "$": {
+            "filename": "package://sciurus17_description/meshes/collision/R_GripperB.stl",
+            "scale": "1.0 1.0 1.0"
+          }
+        }
+      },
+      "origin": {
+        "$": {
+          "xyz": [
+            0,
+            0,
+            0
+          ],
+          "rpy": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "inertial": {
+      "inertia": {
+        "$": {
+          "ixx": "7483.7e-09",
+          "ixy": "361.283e-09",
+          "ixz": "-63.385e-09",
+          "iyy": "4088.581e-09",
+          "iyz": "-228.226e-09",
+          "izz": "4372.991e-09"
+        }
+      },
+      "mass": {
+        "$": {
+          "value": "13.9e-03"
+        }
+      },
+      "origin": {
+        "$": {
+          "xyz": [
+            -0.002707,
+            -0.030901,
+            0.002845
+          ],
+          "rpy": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    }
+  }
+}

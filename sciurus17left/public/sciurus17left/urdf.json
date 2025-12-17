@@ -1,0 +1,149 @@
+{
+  "waist_yaw_joint": {
+    "$": {"name": "waist_yaw_joint", "type": "revolute"},
+    "parent": {"$": {"link": "base_link"}},
+    "child": {"$": {"link": "body_link"}},
+    "limit": {
+      "$": {
+        "effort": 4,
+        "lower": -1.9198621771937625,
+        "upper": 1.9198621771937625,
+        "velocity": 5.969211435
+      }
+    },
+    "axis": {"$": {"xyz": [0, 0, 1]}},
+    "dynamics": {"$": {"damping": "1.0e-6", "friction": "0.8"}},
+    "origin": {"$": {"xyz": [0, 0, 0.1315], "rpy": [0, 0, 0]}}
+  },
+  "l_arm_joint1": {
+    "$": {"name": "l_arm_joint1", "type": "revolute"},
+    "parent": {"$": {"link": "body_link"}},
+    "child": {"$": {"link": "l_link1"}},
+    "limit": {
+      "$": {
+        "effort": 4,
+        "lower": -1.5707963267948966,
+        "upper": 1.5707963267948966,
+        "velocity": 5.969211435
+      }
+    },
+    "axis": {"$": {"xyz": [0, 1, 0]}},
+    "dynamics": {"$": {"damping": "1.0e-6", "friction": "0.8"}},
+    "origin": {"$": {"xyz": [0.08083, 0.0965, 0.2885], "rpy": [0, 0, 0]}}
+  },
+  "l_arm_joint2": {
+    "$": {"name": "l_arm_joint2", "type": "revolute"},
+    "parent": {"$": {"link": "l_link1"}},
+    "child": {"$": {"link": "l_link2"}},
+    "limit": {
+      "$": {
+        "effort": 4,
+        "lower": 0,
+        "upper": 1.6057029118347832,
+        "velocity": 5.969211435
+      }
+    },
+    "axis": {"$": {"xyz": [-1, 0, 0]}},
+    "dynamics": {"$": {"damping": "1.0e-6", "friction": "0.8"}},
+    "origin": {"$": {"xyz": [0, 0.064, 0], "rpy": [0, 0, 0]}}
+  },
+  "l_arm_joint3": {
+    "$": {"name": "l_arm_joint3", "type": "revolute"},
+    "parent": {"$": {"link": "l_link2"}},
+    "child": {"$": {"link": "l_link3"}},
+    "limit": {
+      "$": {
+        "effort": 4,
+        "lower": -1.5707963267948966,
+        "upper": 1.5707963267948966,
+        "velocity": 5.969211435
+      }
+    },
+    "axis": {"$": {"xyz": [0, 1, 0]}},
+    "dynamics": {"$": {"damping": "1.0e-6", "friction": "0.8"}},
+    "origin": {"$": {"xyz": [0, 0.065, 0], "rpy": [0, 0, 0]}}
+  },
+  "l_arm_joint4": {
+    "$": {"name": "l_arm_joint4", "type": "revolute"},
+    "parent": {"$": {"link": "l_link3"}},
+    "child": {"$": {"link": "l_link4"}},
+    "limit": {
+      "$": {
+        "effort": 4,
+        "lower": -2.7401669256310974,
+        "upper": 0.00017453292519943296,
+        "velocity": 5.969211435
+      }
+    },
+    "axis": {"$": {"xyz": [0, 0, 1]}},
+    "dynamics": {"$": {"damping": "1.0e-6", "friction": "0.8"}},
+    "origin": {"$": {"xyz": [0, 0.185, 0], "rpy": [0, 0, 0]}}
+  },
+  "l_arm_joint5": {
+    "$": {"name": "l_arm_joint5", "type": "revolute"},
+    "parent": {"$": {"link": "l_link4"}},
+    "child": {"$": {"link": "l_link5"}},
+    "limit": {
+      "$": {
+        "effort": 4,
+        "lower": -1.5707963267948966,
+        "upper": 1.5707963267948966,
+        "velocity": 5.969211435
+      }
+    },
+    "axis": {"$": {"xyz": [0, 1, 0]}},
+    "dynamics": {"$": {"damping": "1.0e-6", "friction": "0.8"}},
+    "origin": {"$": {"xyz": [0, 0.121, 0], "rpy": [0, 0, 0]}}
+  },
+  "l_arm_joint6": {
+    "$": {"name": "l_arm_joint6", "type": "revolute"},
+    "parent": {"$": {"link": "l_link5"}},
+    "child": {"$": {"link": "l_link6"}},
+    "limit": {
+      "$": {
+        "effort": 4,
+        "lower": -1.0471975511965976,
+        "upper": 2.1467549799530254,
+        "velocity": 5.969211435
+      }
+    },
+    "axis": {"$": {"xyz": [0, 0, 1]}},
+    "dynamics": {"$": {"damping": "1.0e-6", "friction": "0.8"}},
+    "origin": {"$": {"xyz": [0, 0.129, 0], "rpy": [0, 0, 0]}}
+  },
+  "l_arm_joint7": {
+    "$": {"name": "l_arm_joint7", "type": "revolute"},
+    "parent": {"$": {"link": "l_link6"}},
+    "child": {"$": {"link": "l_link7"}},
+    "limit": {
+      "$": {
+        "effort": 4,
+        "lower": -2.9670597283903604,
+        "upper": 2.9670597283903604,
+        "velocity": 5.969211435
+      }
+    },
+    "axis": {"$": {"xyz": [0, 1, 0]}},
+    "dynamics": {"$": {"damping": "1.0e-6", "friction": "0.8"}},
+    "origin": {"$": {"xyz": [0, 0.0191, 0], "rpy": [0, 0, 0]}}
+  },
+  "l_gripper_mimic_joint": {
+    "$": {"name": "l_gripper_mimic_joint", "type": "revolute"},
+    "parent": {"$": {"link": "l_link7"}},
+    "child": {"$": {"link": "l_gripperB_link"}},
+    "limit": {
+      "$": {
+        "effort": 4,
+        "lower": -1.5009831567151235,
+        "upper": 0.0008726646259971648,
+        "velocity": 5.969211435
+      }
+    },
+    "axis": {"$": {"xyz": [0, 0, -1]}},
+    "mimic": {
+      "$": {"joint": "l_gripper_joint", "multiplier": "1", "offset": "0"}
+    },
+    "dynamics": {"$": {"damping": "1.0e-6", "friction": "0.8"}},
+    "origin": {"$": {"xyz": [-0.012, 0.024, 0], "rpy": [0, 0, 0]}}
+  }
+}

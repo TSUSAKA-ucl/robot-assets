@@ -1,14 +1,4 @@
 {
-  "world": {
-    "$": {
-      "name": "world"
-    }
-  },
-  "base_link": {
-    "$": {
-      "name": "base_link"
-    }
-  },
   "base_link_inertia": {
     "$": {
       "name": "base_link_inertia"
@@ -583,24 +573,9 @@
       }
     }
   },
-  "ft_frame": {
-    "$": {
-      "name": "ft_frame"
-    }
-  },
-  "base": {
-    "$": {
-      "name": "base"
-    }
-  },
   "flange": {
     "$": {
       "name": "flange"
-    }
-  },
-  "tool0": {
-    "$": {
-      "name": "tool0"
     }
   }
 }
