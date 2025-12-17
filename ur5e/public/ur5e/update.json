@@ -2,7 +2,20 @@
   "base_link_inertia": {
     "visual": [
       {
-        "geometry": {"mesh": {"$": {"filename": "base.dae.gltf"}}},
+        "geometry": {"mesh": {"$": {"filename": "base.gltf"}}},
+        "origin": {
+          "$": {
+            "rpy": [
+              -1.5707963267948966,
+              1.2246467991473532e-16,
+              3.141592653589793
+            ],
+            "xyz": [0, 0, 0]
+          }
+        }
+      },
+      {
+        "geometry": {"mesh": {"$": {"filename": "base.bbox.gltf"}}},
         "origin": {
           "$": {
             "rpy": [
@@ -19,7 +32,20 @@
   "shoulder_link": {
     "visual": [
       {
-        "geometry": {"mesh": {"$": {"filename": "shoulder.dae.gltf"}}},
+        "geometry": {"mesh": {"$": {"filename": "shoulder.gltf"}}},
+        "origin": {
+          "$": {
+            "rpy": [
+              -1.5707963267948966,
+              1.2246467991473532e-16,
+              3.141592653589793
+            ],
+            "xyz": [0, 0, 0]
+          }
+        }
+      },
+      {
+        "geometry": {"mesh": {"$": {"filename": "shoulder.bbox.gltf"}}},
         "origin": {
           "$": {
             "rpy": [
@@ -36,7 +62,20 @@
   "upper_arm_link": {
     "visual": [
       {
-        "geometry": {"mesh": {"$": {"filename": "upperarm.dae.gltf"}}},
+        "geometry": {"mesh": {"$": {"filename": "upperarm.gltf"}}},
+        "origin": {
+          "$": {
+            "rpy": [
+              3.141592653589793,
+              -1.2246467991473532e-16,
+              1.5707963267948966
+            ],
+            "xyz": [0, 0, 0.138]
+          }
+        }
+      },
+      {
+        "geometry": {"mesh": {"$": {"filename": "upperarm.bbox.gltf"}}},
         "origin": {
           "$": {
             "rpy": [
@@ -53,7 +92,20 @@
   "forearm_link": {
     "visual": [
       {
-        "geometry": {"mesh": {"$": {"filename": "forearm.dae.gltf"}}},
+        "geometry": {"mesh": {"$": {"filename": "forearm.gltf"}}},
+        "origin": {
+          "$": {
+            "rpy": [
+              3.141592653589793,
+              -1.2246467991473532e-16,
+              1.5707963267948966
+            ],
+            "xyz": [0, 0, 0.007]
+          }
+        }
+      },
+      {
+        "geometry": {"mesh": {"$": {"filename": "forearm.bbox.gltf"}}},
         "origin": {
           "$": {
             "rpy": [
@@ -70,7 +122,13 @@
   "wrist_1_link": {
     "visual": [
       {
-        "geometry": {"mesh": {"$": {"filename": "wrist1.dae.gltf"}}},
+        "geometry": {"mesh": {"$": {"filename": "wrist1.gltf"}}},
+        "origin": {
+          "$": {"rpy": [3.141592653589793, 0, 0], "xyz": [0, 0, -0.127]}
+        }
+      },
+      {
+        "geometry": {"mesh": {"$": {"filename": "wrist1.bbox.gltf"}}},
         "origin": {
           "$": {"rpy": [3.141592653589793, 0, 0], "xyz": [0, 0, -0.127]}
         }
@@ -80,7 +138,13 @@
   "wrist_2_link": {
     "visual": [
       {
-        "geometry": {"mesh": {"$": {"filename": "wrist2.dae.gltf"}}},
+        "geometry": {"mesh": {"$": {"filename": "wrist2.gltf"}}},
+        "origin": {
+          "$": {"rpy": [1.5707963267948966, 0, 0], "xyz": [0, 0, -0.0997]}
+        }
+      },
+      {
+        "geometry": {"mesh": {"$": {"filename": "wrist2.bbox.gltf"}}},
         "origin": {
           "$": {"rpy": [1.5707963267948966, 0, 0], "xyz": [0, 0, -0.0997]}
         }
@@ -90,11 +154,30 @@
   "wrist_3_link": {
     "visual": [
       {
-        "geometry": {"mesh": {"$": {"filename": "wrist3.dae.gltf"}}},
+        "geometry": {"mesh": {"$": {"filename": "wrist3.gltf"}}},
         "origin": {
           "$": {"rpy": [3.141592653589793, 0, 0], "xyz": [0, 0, -0.0989]}
         }
+      },
+      {
+        "geometry": {"mesh": {"$": {"filename": "wrist3.bbox.gltf"}}},
+        "origin": {
+          "$": {"rpy": [3.141592653589793, 0, 0], "xyz": [0, 0, -0.0989]}
+        }
+      },
+      {
+        "geometry": {
+          "mesh": {"$": {"filename": "CONVUM_SGE-M5-N-body-m.bbox.gltf"}}
+        },
+        "origin": {"$": {"rpy": [1.5707963267948966, 0, 0], "xyz": [0, 0, 0]}}
+      },
+      {
+        "geometry": {
+          "mesh": {"$": {"filename": "CONVUM_SGE-M5-N-suction-m.bbox.gltf"}}
+        },
+        "origin": {"$": {"rpy": [1.5707963267948966, 0, 0], "xyz": [0, 0, 0]}}
       }
     ]
-  }
+  },
+  "flange": {"$": {"name": "flange"}}
 }

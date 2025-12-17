@@ -9,15 +9,14 @@
 			"name":"Scene",
 			"nodes":[
 				0,
-				1,
-				2
+				1
 			]
 		}
 	],
 	"nodes":[
 		{
 			"mesh":0,
-			"name":"eSeries_UR5e_043",
+			"name":"eSeries_UR5e_013",
 			"rotation":[
 				0,
 				-0.7071068286895752,
@@ -32,22 +31,7 @@
 		},
 		{
 			"mesh":1,
-			"name":"eSeries_UR5e_026",
-			"rotation":[
-				0,
-				-0.7071068286895752,
-				0.7071068286895752,
-				1.3767879636361613e-07
-			],
-			"scale":[
-				0.0009999870089814067,
-				0.0009999870089814067,
-				0.0009999870089814067
-			]
-		},
-		{
-			"mesh":2,
-			"name":"eSeries_UR5e_027",
+			"name":"eSeries_UR5e_006",
 			"rotation":[
 				0,
 				-0.7071068286895752,
@@ -78,20 +62,6 @@
 		},
 		{
 			"doubleSided":true,
-			"name":"URBlue",
-			"pbrMetallicRoughness":{
-				"baseColorFactor":[
-					0.4901961088180542,
-					0.6784313917160034,
-					0.800000011920929,
-					1
-				],
-				"metallicFactor":0,
-				"roughnessFactor":0.5
-			}
-		},
-		{
-			"doubleSided":true,
 			"name":"Black",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[
@@ -107,7 +77,7 @@
 	],
 	"meshes":[
 		{
-			"name":"eSeries UR5e.043",
+			"name":"eSeries UR5e.013",
 			"primitives":[
 				{
 					"attributes":{
@@ -120,7 +90,7 @@
 			]
 		},
 		{
-			"name":"eSeries UR5e.083",
+			"name":"eSeries UR5e.066",
 			"primitives":[
 				{
 					"attributes":{
@@ -131,167 +101,108 @@
 					"material":1
 				}
 			]
-		},
-		{
-			"name":"eSeries UR5e.084",
-			"primitives":[
-				{
-					"attributes":{
-						"POSITION":6,
-						"NORMAL":7
-					},
-					"indices":8,
-					"material":2
-				}
-			]
 		}
 	],
 	"accessors":[
 		{
 			"bufferView":0,
 			"componentType":5126,
-			"count":19161,
+			"count":7523,
 			"max":[
-				37.839500427246094,
-				164.09249877929688,
-				40.55889892578125
+				75.5,
+				75.5,
+				0
 			],
 			"min":[
-				-37.84568786621094,
-				53.44997024536133,
-				-46.037288665771484
+				-75.5,
+				-75.52639770507812,
+				-84.8884048461914
 			],
 			"type":"VEC3"
 		},
 		{
 			"bufferView":1,
 			"componentType":5126,
-			"count":19161,
+			"count":7523,
 			"type":"VEC3"
 		},
 		{
 			"bufferView":2,
 			"componentType":5123,
-			"count":19878,
+			"count":7794,
 			"type":"SCALAR"
 		},
 		{
 			"bufferView":3,
 			"componentType":5126,
-			"count":28343,
+			"count":6516,
 			"max":[
-				39.34367752075195,
-				165.62600708007812,
-				56.294090270996094
+				58.001426696777344,
+				58,
+				-84.87657165527344
 			],
 			"min":[
-				-39.35585021972656,
-				86.95671081542969,
-				7.071782112121582
+				-58,
+				-58,
+				-99.0999984741211
 			],
 			"type":"VEC3"
 		},
 		{
 			"bufferView":4,
 			"componentType":5126,
-			"count":28343,
+			"count":6516,
 			"type":"VEC3"
 		},
 		{
 			"bufferView":5,
 			"componentType":5123,
-			"count":28539,
-			"type":"SCALAR"
-		},
-		{
-			"bufferView":6,
-			"componentType":5126,
-			"count":3303,
-			"max":[
-				37.519378662109375,
-				163.810791015625,
-				-46.037288665771484
-			],
-			"min":[
-				-37.497520446777344,
-				88.80968475341797,
-				-53.587337493896484
-			],
-			"type":"VEC3"
-		},
-		{
-			"bufferView":7,
-			"componentType":5126,
-			"count":3303,
-			"type":"VEC3"
-		},
-		{
-			"bufferView":8,
-			"componentType":5123,
-			"count":3447,
+			"count":6720,
 			"type":"SCALAR"
 		}
 	],
 	"bufferViews":[
 		{
 			"buffer":0,
-			"byteLength":229932,
+			"byteLength":90276,
 			"byteOffset":0,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":229932,
-			"byteOffset":229932,
+			"byteLength":90276,
+			"byteOffset":90276,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":39756,
-			"byteOffset":459864,
+			"byteLength":15588,
+			"byteOffset":180552,
 			"target":34963
 		},
 		{
 			"buffer":0,
-			"byteLength":340116,
-			"byteOffset":499620,
+			"byteLength":78192,
+			"byteOffset":196140,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":340116,
-			"byteOffset":839736,
+			"byteLength":78192,
+			"byteOffset":274332,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":57078,
-			"byteOffset":1179852,
-			"target":34963
-		},
-		{
-			"buffer":0,
-			"byteLength":39636,
-			"byteOffset":1236932,
-			"target":34962
-		},
-		{
-			"buffer":0,
-			"byteLength":39636,
-			"byteOffset":1276568,
-			"target":34962
-		},
-		{
-			"buffer":0,
-			"byteLength":6894,
-			"byteOffset":1316204,
+			"byteLength":13440,
+			"byteOffset":352524,
 			"target":34963
 		}
 	],
 	"buffers":[
 		{
-			"byteLength":1323100,
-			"uri":"wrist1.dae.bin"
+			"byteLength":365964,
+			"uri":"base.bin"
 		}
 	]
 }
