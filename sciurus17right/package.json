@@ -1,6 +1,6 @@
 {
   "name": "@ucl-nuee/sciurus17right",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "files": [
 "public/sciurus17right/Body.bin",
 "public/sciurus17right/Body.gltf",
@@ -25,7 +25,6 @@
 "public/sciurus17right/R_Link7.bin",
 "public/sciurus17right/R_Link7.gltf",
 "public/sciurus17right/linkmap.json",
-"public/sciurus17right/package.json",
 "public/sciurus17right/update.json",
 "public/sciurus17right/urdf.json"
   ],

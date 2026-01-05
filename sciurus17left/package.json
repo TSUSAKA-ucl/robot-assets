@@ -1,6 +1,6 @@
 {
   "name": "@ucl-nuee/sciurus17left",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "files": [
 "public/sciurus17left/Base.bin",
 "public/sciurus17left/Base.gltf",
@@ -27,7 +27,6 @@
 "public/sciurus17left/Logo_Rabbit.bin",
 "public/sciurus17left/Logo_Rabbit.gltf",
 "public/sciurus17left/linkmap.json",
-"public/sciurus17left/package.json",
 "public/sciurus17left/update.json",
 "public/sciurus17left/urdf.json"
   ],
