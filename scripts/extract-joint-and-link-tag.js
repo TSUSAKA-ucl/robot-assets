@@ -151,6 +151,10 @@ argv._.forEach(filename => {
 	      const bbox = fbase+'.bbox.gltf';
 	      const meshVisual = { geometry: {mesh: {$:{filename: mesh.split('/').pop()}}}};
 	      const bboxVisual = { geometry: {mesh: {$:{filename: bbox.split('/').pop()}}}};
+	      if (visual.geometry.mesh.$.scale) {
+		meshVisual.geometry.mesh.$.scale = visual.geometry.mesh.$.scale;
+		bboxVisual.geometry.mesh.$.scale = visual.geometry.mesh.$.scale;
+	      }
 	      if (origin) { // origin must be always set
 		meshVisual.origin = { $: origin };
 		bboxVisual.origin = { $: origin };
