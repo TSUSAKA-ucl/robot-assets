@@ -1,146 +1,106 @@
 {
   "asset": {
-    "version": "2.0",
-    "generator": "Open Asset Import Library (assimp v5.3.0)"
+    "generator": "Khronos glTF Blender I/O v3.6.28",
+    "version": "2.0"
   },
-  "extensionsUsed": [
-    "KHR_materials_specular",
-    "KHR_materials_volume",
-    "FB_ngon_encoding"
-  ],
-  "accessors": [
+  "scene": 0,
+  "scenes": [
     {
-      "bufferView": 0,
-      "byteOffset": 0,
-      "componentType": 5126,
-      "count": 96,
-      "type": "VEC3",
-      "max": [
-        0.035771001130342484,
-        0.0645039975643158,
-        0.03537299856543541
-      ],
-      "min": [
-        -0.03576900064945221,
-        -0.061778001487255096,
-        -0.04462699964642525
-      ]
-    },
-    {
-      "bufferView": 1,
-      "byteOffset": 0,
-      "componentType": 5126,
-      "count": 96,
-      "type": "VEC3",
-      "max": [
-        1,
-        1,
-        1
-      ],
-      "min": [
-        -1,
-        -1,
-        -1
-      ]
-    },
-    {
-      "bufferView": 2,
-      "byteOffset": 0,
-      "componentType": 5125,
-      "count": 132,
-      "type": "SCALAR",
-      "max": [
-        95
-      ],
-      "min": [
+      "name": "Scene",
+      "nodes": [
         0
       ]
     }
   ],
-  "buffers": [
+  "nodes": [
     {
-      "byteLength": 2832,
-      "uri": "Link5.bbox.bin"
+      "mesh": 0,
+      "name": "Link5.bbox"
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Link5.bbox",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1
+          },
+          "indices": 2,
+          "material": 0
+        }
+      ]
+    }
+  ],
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 32,
+      "max": [
+        0.0357699990272522,
+        0.03537299856543541,
+        0.061778001487255096
+      ],
+      "min": [
+        -0.03576900064945221,
+        -0.056005001068115234,
+        -0.0645039975643158
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 32,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5123,
+      "count": 180,
+      "type": "SCALAR"
     }
   ],
   "bufferViews": [
     {
       "buffer": 0,
+      "byteLength": 384,
       "byteOffset": 0,
-      "byteLength": 1152,
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteOffset": 1152,
-      "byteLength": 1152,
+      "byteLength": 384,
+      "byteOffset": 384,
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteOffset": 2304,
-      "byteLength": 528,
+      "byteLength": 360,
+      "byteOffset": 768,
       "target": 34963
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 1128,
+      "uri": "Link5.bbox.bin"
     }
   ],
   "materials": [
     {
       "name": "DefaultMaterial",
       "pbrMetallicRoughness": {
-        "metallicFactor": 0,
         "baseColorFactor": [
           1,
+          1,
           0,
-          0,
-          0.25
+          0.2
         ]
-      },
-      "extensions": {
-        "KHR_materials_specular": {
-          "specularFactor": 1,
-          "specularColorFactor": [
-            1,
-            1,
-            1
-          ]
-        }
       },
       "alphaMode": "BLEND"
     }
-  ],
-  "meshes": [
-    {
-      "primitives": [
-        {
-          "mode": 4,
-          "material": 0,
-          "indices": 2,
-          "attributes": {
-            "POSITION": 0,
-            "NORMAL": 1
-          }
-        }
-      ]
-    }
-  ],
-  "nodes": [
-    {
-      "name": "<STL_BINARY>",
-      "children": [
-        1
-      ]
-    },
-    {
-      "name": "node",
-      "mesh": 0
-    }
-  ],
-  "scenes": [
-    {
-      "nodes": [
-        0
-      ]
-    }
-  ],
-  "scene": 0
+  ]
 }

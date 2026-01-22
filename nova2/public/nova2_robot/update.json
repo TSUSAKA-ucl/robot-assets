@@ -1,123 +1,97 @@
 {
-  "joint3": {
-    "limit": {
-      "$": {
-	"lower": 0.5
-      }
-    }
-  },
   "base_link": {
     "visual": [
       {
-        "geometry": { "mesh": { "$": {
-          "filename": "base_link.STL.gltf"
-        }}}
+        "geometry": {"mesh": {"$": {"filename": "base_link.gltf"}}},
+        "origin": {"$": {"rpy": [1.5707963267948966, 0, 0], "xyz": [0, 0, 0]}}
       },
       {
-        "geometry": { "mesh": { "$": {
-          "filename": "base_link.bbox.gltf"
-        }}}
+        "geometry": {"mesh": {"$": {"filename": "base_link.bbox.gltf"}}},
+        "origin": {"$": {"rpy": [1.5707963267948966, 0, 0], "xyz": [0, 0, 0]}}
       }
     ]
   },
   "Link1": {
     "visual": [
       {
-        "origin": { "$": { "rpyDegrees": [ 0, 0, 90 ], "xyz": [ 0, 0, 0 ]}},
-        "geometry": { "mesh": { "$": {
-          "filename": "Link1.STL.gltf"
-        }}}
+        "geometry": {"mesh": {"$": {"filename": "Link1.gltf"}}},
+        "origin": {"$": {"rpy": [1.5707963267948966, 0, 0], "xyz": [0, 0, 0]}}
       },
       {
-        "origin": { "$": { "rpyDegrees": [ 0, 0, 90 ], "xyz": [ 0, 0, 0 ]}},
-        "geometry": { "mesh": { "$": {
-          "filename": "Link1.bbox.gltf"
-        }}}
+        "geometry": {"mesh": {"$": {"filename": "Link1.bbox.gltf"}}},
+        "origin": {"$": {"rpy": [1.5707963267948966, 0, 0], "xyz": [0, 0, 0]}}
       }
     ]
   },
   "Link2": {
     "visual": [
       {
-        "geometry": { "mesh": { "$": {
-          "filename": "Link2.STL.gltf"
-        }}}
+        "geometry": {"mesh": {"$": {"filename": "Link2.gltf"}}},
+        "origin": {"$": {"rpy": [1.5707963267948966, 0, 0], "xyz": [0, 0, 0]}}
       },
       {
-        "geometry": { "mesh": { "$": {
-          "filename": "Link2.bbox.gltf"
-        }}}
+        "geometry": {"mesh": {"$": {"filename": "Link2.bbox.gltf"}}},
+        "origin": {"$": {"rpy": [1.5707963267948966, 0, 0], "xyz": [0, 0, 0]}}
       }
     ]
   },
   "Link3": {
     "visual": [
       {
-        "geometry": { "mesh": { "$": {
-          "filename": "Link3.STL.gltf"
-        }}}
+        "geometry": {"mesh": {"$": {"filename": "Link3.gltf"}}},
+        "origin": {"$": {"rpy": [1.5707963267948966, 0, 0], "xyz": [0, 0, 0]}}
       },
       {
-        "geometry": { "mesh": { "$": {
-          "filename": "Link3.bbox.gltf"
-        }}}
+        "geometry": {"mesh": {"$": {"filename": "Link3.bbox.gltf"}}},
+        "origin": {"$": {"rpy": [1.5707963267948966, 0, 0], "xyz": [0, 0, 0]}}
       }
     ]
   },
   "Link4": {
     "visual": [
       {
-        "geometry": { "mesh": { "$": {
-          "filename": "Link4.STL.gltf"
-        }}}
+        "geometry": {"mesh": {"$": {"filename": "Link4.gltf"}}},
+        "origin": {"$": {"rpy": [1.5707963267948966, 0, 0], "xyz": [0, 0, 0]}}
       },
       {
-        "geometry": { "mesh": { "$": {
-          "filename": "Link4.bbox.gltf"
-        }}}
+        "geometry": {"mesh": {"$": {"filename": "Link4.bbox.gltf"}}},
+        "origin": {"$": {"rpy": [1.5707963267948966, 0, 0], "xyz": [0, 0, 0]}}
       }
     ]
   },
   "Link5": {
     "visual": [
       {
-        "geometry": { "mesh": { "$": {
-          "filename": "Link5.STL.gltf"
-        }}}
+        "geometry": {"mesh": {"$": {"filename": "Link5.gltf"}}},
+        "origin": {"$": {"rpy": [1.5707963267948966, 0, 0], "xyz": [0, 0, 0]}}
       },
       {
-        "geometry": { "mesh": { "$": {
-          "filename": "Link5.bbox.gltf"
-        }}}
+        "geometry": {"mesh": {"$": {"filename": "Link5.bbox.gltf"}}},
+        "origin": {"$": {"rpy": [1.5707963267948966, 0, 0], "xyz": [0, 0, 0]}}
       }
     ]
   },
   "Link6": {
     "visual": [
       {
-        "geometry": { "mesh": { "$": {
-          "filename": "Link6.STL.gltf"
-        }}}
+        "geometry": {"mesh": {"$": {"filename": "Link6.gltf"}}},
+        "origin": {"$": {"rpy": [1.5707963267948966, 0, 0], "xyz": [0, 0, 0]}}
       },
       {
-        "geometry": { "mesh": { "$": {
-          "filename": "Link6.bbox.gltf"
-        }}}
+        "geometry": {"mesh": {"$": {"filename": "Link6.bbox.gltf"}}},
+        "origin": {"$": {"rpy": [1.5707963267948966, 0, 0], "xyz": [0, 0, 0]}}
       },
       {
-        "geometry": { "mesh": { "$": {
-          "filename": "CONVUM_SGE-M5-N-body-m.bbox.gltf"
-        }}}
+        "geometry": {
+          "mesh": {"$": {"filename": "CONVUM_SGE-M5-N-body-m.bbox.gltf"}}
+        },
+        "origin": {"$": {"rpy": [1.5707963267948966, 0, 0], "xyz": [0, 0, 0]}}
       },
       {
-        "geometry": { "mesh": { "$": {
-          "filename": "CONVUM_SGE-M5-N-realsense-m.bbox.gltf"
-        }}}
-      },
-      {
-        "geometry": { "mesh": { "$": {
-          "filename": "CONVUM_SGE-M5-N-suction-m.bbox.gltf"
-        }}}
+        "geometry": {
+          "mesh": {"$": {"filename": "CONVUM_SGE-M5-N-suction-m.bbox.gltf"}}
+        },
+        "origin": {"$": {"rpy": [1.5707963267948966, 0, 0], "xyz": [0, 0, 0]}}
       }
     ]
   }
