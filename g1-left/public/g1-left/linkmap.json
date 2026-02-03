@@ -1,46 +1,30 @@
 {
-  "left_elbow_link": {
+  "waist_yaw_link": {
     "$": {
-      "name": "left_elbow_link"
+      "name": "waist_yaw_link"
     },
     "inertial": {
-      "origin": {
-        "$": {
-          "xyz": [
-            0.064956,
-            0.004454,
-            -0.010062
-          ],
-          "rpy": [
-            0,
-            0,
-            0
-          ]
-        }
-      },
       "mass": {
         "$": {
-          "value": "0.6"
+          "value": "0.214"
         }
       },
       "inertia": {
         "$": {
-          "ixx": "0.0002891",
-          "ixy": "6.53E-05",
-          "ixz": "1.72E-05",
-          "iyy": "0.0004152",
-          "iyz": "-5.6E-06",
-          "izz": "0.0004197"
+          "ixx": "0.00010673",
+          "ixy": "2.703E-06",
+          "ixz": "-7.631E-06",
+          "iyy": "0.00010422",
+          "iyz": "-2.01E-07",
+          "izz": "0.0001625"
         }
-      }
-    },
-    "visual": {
+      },
       "origin": {
         "$": {
           "xyz": [
-            0,
-            0,
-            0
+            0.003494,
+            0.000233,
+            0.018034
           ],
           "rpy": [
             0,
@@ -48,11 +32,13 @@
             0
           ]
         }
-      },
+      }
+    },
+    "visual": {
       "geometry": {
         "mesh": {
           "$": {
-            "filename": "meshes/left_elbow_link.STL"
+            "filename": "meshes/waist_yaw_link_rev_1_0.STL"
           }
         }
       },
@@ -60,9 +46,7 @@
         "$": {
           "name": "white"
         }
-      }
-    },
-    "collision": {
+      },
       "origin": {
         "$": {
           "xyz": [
@@ -75,58 +59,35 @@
             0,
             0
           ]
-        }
-      },
-      "geometry": {
-        "mesh": {
-          "$": {
-            "filename": "meshes/left_elbow_link.STL"
-          }
         }
       }
     }
   },
-  "left_rubber_hand": {
+  "waist_roll_link": {
     "$": {
-      "name": "left_rubber_hand"
+      "name": "waist_roll_link"
     },
     "inertial": {
-      "origin": {
-        "$": {
-          "xyz": [
-            0.05361310808,
-            -0.0029590524,
-            0.00215413091
-          ],
-          "rpy": [
-            0,
-            0,
-            0
-          ]
-        }
-      },
       "mass": {
         "$": {
-          "value": "0.170"
+          "value": "0.086"
         }
       },
       "inertia": {
         "$": {
-          "ixx": "0.00010099485234748",
-          "ixy": "0.00003618590790516",
-          "ixz": "-0.00000074301518642",
-          "iyy": "0.00028135871571621",
-          "iyz": "0.00000330189743286",
-          "izz": "0.00021894770413514"
+          "ixx": "7.079E-06",
+          "ixy": "0",
+          "ixz": "0",
+          "iyy": "6.339E-06",
+          "iyz": "0",
+          "izz": "8.245E-06"
         }
-      }
-    },
-    "visual": {
+      },
       "origin": {
         "$": {
           "xyz": [
             0,
-            0,
+            0.000023,
             0
           ],
           "rpy": [
@@ -135,17 +96,120 @@
             0
           ]
         }
-      },
+      }
+    },
+    "visual": {
       "geometry": {
         "mesh": {
           "$": {
-            "filename": "meshes/left_rubber_hand.STL"
+            "filename": "meshes/waist_roll_link_rev_1_0.STL"
           }
         }
       },
       "material": {
         "$": {
           "name": "white"
+        }
+      },
+      "origin": {
+        "$": {
+          "xyz": [
+            0,
+            0,
+            0
+          ],
+          "rpy": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    }
+  },
+  "torso_link": {
+    "$": {
+      "name": "torso_link"
+    },
+    "inertial": {
+      "mass": {
+        "$": {
+          "value": "6.78"
+        }
+      },
+      "inertia": {
+        "$": {
+          "ixx": "0.05905",
+          "ixy": "3.3302E-05",
+          "ixz": "-0.0017715",
+          "iyy": "0.047014",
+          "iyz": "-2.2399E-05",
+          "izz": "0.025652"
+        }
+      },
+      "origin": {
+        "$": {
+          "xyz": [
+            0.000931,
+            0.000346,
+            0.15082
+          ],
+          "rpy": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "visual": {
+      "geometry": {
+        "mesh": {
+          "$": {
+            "filename": "meshes/torso_link_rev_1_0.STL"
+          }
+        }
+      },
+      "material": {
+        "$": {
+          "name": "white"
+        }
+      },
+      "origin": {
+        "$": {
+          "xyz": [
+            0,
+            0,
+            0
+          ],
+          "rpy": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "collision": {
+      "geometry": {
+        "mesh": {
+          "$": {
+            "filename": "meshes/torso_link_rev_1_0.STL"
+          }
+        }
+      },
+      "origin": {
+        "$": {
+          "xyz": [
+            0,
+            0,
+            0
+          ],
+          "rpy": [
+            0,
+            0,
+            0
+          ]
         }
       }
     }
@@ -155,20 +219,6 @@
       "name": "left_shoulder_pitch_link"
     },
     "inertial": {
-      "origin": {
-        "$": {
-          "xyz": [
-            0,
-            0.035892,
-            -0.011628
-          ],
-          "rpy": [
-            0,
-            0,
-            0
-          ]
-        }
-      },
       "mass": {
         "$": {
           "value": "0.718"
@@ -183,9 +233,35 @@
           "iyz": "2.26E-05",
           "izz": "0.000423"
         }
+      },
+      "origin": {
+        "$": {
+          "xyz": [
+            0,
+            0.035892,
+            -0.011628
+          ],
+          "rpy": [
+            0,
+            0,
+            0
+          ]
+        }
       }
     },
     "visual": {
+      "geometry": {
+        "mesh": {
+          "$": {
+            "filename": "meshes/left_shoulder_pitch_link.STL"
+          }
+        }
+      },
+      "material": {
+        "$": {
+          "name": "white"
+        }
+      },
       "origin": {
         "$": {
           "xyz": [
@@ -199,21 +275,17 @@
             0
           ]
         }
-      },
-      "geometry": {
-        "mesh": {
-          "$": {
-            "filename": "meshes/left_shoulder_pitch_link.STL"
-          }
-        }
-      },
-      "material": {
-        "$": {
-          "name": "white"
-        }
       }
     },
     "collision": {
+      "geometry": {
+        "cylinder": {
+          "$": {
+            "radius": "0.03",
+            "length": "0.05"
+          }
+        }
+      },
       "origin": {
         "$": {
           "xyz": [
@@ -227,14 +299,6 @@
             0
           ]
         }
-      },
-      "geometry": {
-        "cylinder": {
-          "$": {
-            "radius": "0.03",
-            "length": "0.05"
-          }
-        }
       }
     }
   },
@@ -243,20 +307,6 @@
       "name": "left_shoulder_roll_link"
     },
     "inertial": {
-      "origin": {
-        "$": {
-          "xyz": [
-            -0.000227,
-            0.00727,
-            -0.063243
-          ],
-          "rpy": [
-            0,
-            0,
-            0
-          ]
-        }
-      },
       "mass": {
         "$": {
           "value": "0.643"
@@ -271,9 +321,35 @@
           "iyz": "-5.3E-06",
           "izz": "0.0003894"
         }
+      },
+      "origin": {
+        "$": {
+          "xyz": [
+            -0.000227,
+            0.00727,
+            -0.063243
+          ],
+          "rpy": [
+            0,
+            0,
+            0
+          ]
+        }
       }
     },
     "visual": {
+      "geometry": {
+        "mesh": {
+          "$": {
+            "filename": "meshes/left_shoulder_roll_link.STL"
+          }
+        }
+      },
+      "material": {
+        "$": {
+          "name": "white"
+        }
+      },
       "origin": {
         "$": {
           "xyz": [
@@ -287,21 +363,17 @@
             0
           ]
         }
-      },
-      "geometry": {
-        "mesh": {
-          "$": {
-            "filename": "meshes/left_shoulder_roll_link.STL"
-          }
-        }
-      },
-      "material": {
-        "$": {
-          "name": "white"
-        }
       }
     },
     "collision": {
+      "geometry": {
+        "cylinder": {
+          "$": {
+            "radius": "0.03",
+            "length": "0.03"
+          }
+        }
+      },
       "origin": {
         "$": {
           "xyz": [
@@ -315,14 +387,6 @@
             0
           ]
         }
-      },
-      "geometry": {
-        "cylinder": {
-          "$": {
-            "radius": "0.03",
-            "length": "0.03"
-          }
-        }
       }
     }
   },
@@ -331,20 +395,6 @@
       "name": "left_shoulder_yaw_link"
     },
     "inertial": {
-      "origin": {
-        "$": {
-          "xyz": [
-            0.010773,
-            -0.002949,
-            -0.072009
-          ],
-          "rpy": [
-            0,
-            0,
-            0
-          ]
-        }
-      },
       "mass": {
         "$": {
           "value": "0.734"
@@ -359,15 +409,13 @@
           "iyz": "-2.86E-05",
           "izz": "0.0004354"
         }
-      }
-    },
-    "visual": {
+      },
       "origin": {
         "$": {
           "xyz": [
-            0,
-            0,
-            0
+            0.010773,
+            -0.002949,
+            -0.072009
           ],
           "rpy": [
             0,
@@ -375,7 +423,9 @@
             0
           ]
         }
-      },
+      }
+    },
+    "visual": {
       "geometry": {
         "mesh": {
           "$": {
@@ -387,9 +437,7 @@
         "$": {
           "name": "white"
         }
-      }
-    },
-    "collision": {
+      },
       "origin": {
         "$": {
           "xyz": [
@@ -403,58 +451,58 @@
             0
           ]
         }
-      },
+      }
+    },
+    "collision": {
       "geometry": {
         "mesh": {
           "$": {
             "filename": "meshes/left_shoulder_yaw_link.STL"
           }
+        }
+      },
+      "origin": {
+        "$": {
+          "xyz": [
+            0,
+            0,
+            0
+          ],
+          "rpy": [
+            0,
+            0,
+            0
+          ]
         }
       }
     }
   },
-  "left_wrist_pitch_link": {
+  "left_elbow_link": {
     "$": {
-      "name": "left_wrist_pitch_link"
+      "name": "left_elbow_link"
     },
     "inertial": {
-      "origin": {
-        "$": {
-          "xyz": [
-            0.02299989837,
-            -0.00111685314,
-            -0.00111658096
-          ],
-          "rpy": [
-            0,
-            0,
-            0
-          ]
-        }
-      },
       "mass": {
         "$": {
-          "value": "0.48404956"
+          "value": "0.6"
         }
       },
       "inertia": {
         "$": {
-          "ixx": "0.00016579646273",
-          "ixy": "-0.00001231206746",
-          "ixz": "0.00001231699194",
-          "iyy": "0.00042954057410",
-          "iyz": "0.00000081417712",
-          "izz": "0.00042953697654"
+          "ixx": "0.0002891",
+          "ixy": "6.53E-05",
+          "ixz": "1.72E-05",
+          "iyy": "0.0004152",
+          "iyz": "-5.6E-06",
+          "izz": "0.0004197"
         }
-      }
-    },
-    "visual": {
+      },
       "origin": {
         "$": {
           "xyz": [
-            0,
-            0,
-            0
+            0.064956,
+            0.004454,
+            -0.010062
           ],
           "rpy": [
             0,
@@ -462,11 +510,13 @@
             0
           ]
         }
-      },
+      }
+    },
+    "visual": {
       "geometry": {
         "mesh": {
           "$": {
-            "filename": "meshes/left_wrist_pitch_link.STL"
+            "filename": "meshes/left_elbow_link.STL"
           }
         }
       },
@@ -474,9 +524,7 @@
         "$": {
           "name": "white"
         }
-      }
-    },
-    "collision": {
+      },
       "origin": {
         "$": {
           "xyz": [
@@ -490,12 +538,28 @@
             0
           ]
         }
-      },
+      }
+    },
+    "collision": {
       "geometry": {
         "mesh": {
           "$": {
-            "filename": "meshes/left_wrist_pitch_link.STL"
+            "filename": "meshes/left_elbow_link.STL"
           }
+        }
+      },
+      "origin": {
+        "$": {
+          "xyz": [
+            0,
+            0,
+            0
+          ],
+          "rpy": [
+            0,
+            0,
+            0
+          ]
         }
       }
     }
@@ -505,20 +569,6 @@
       "name": "left_wrist_roll_link"
     },
     "inertial": {
-      "origin": {
-        "$": {
-          "xyz": [
-            0.01713944778,
-            0.00053759094,
-            4.8864e-7
-          ],
-          "rpy": [
-            0,
-            0,
-            0
-          ]
-        }
-      },
       "mass": {
         "$": {
           "value": "0.08544498"
@@ -533,15 +583,13 @@
           "iyz": "-0.00000000123525",
           "izz": "0.00005482106541"
         }
-      }
-    },
-    "visual": {
+      },
       "origin": {
         "$": {
           "xyz": [
-            0,
-            0,
-            0
+            0.01713944778,
+            0.00053759094,
+            4.8864e-7
           ],
           "rpy": [
             0,
@@ -549,7 +597,9 @@
             0
           ]
         }
-      },
+      }
+    },
+    "visual": {
       "geometry": {
         "mesh": {
           "$": {
@@ -561,9 +611,7 @@
         "$": {
           "name": "white"
         }
-      }
-    },
-    "collision": {
+      },
       "origin": {
         "$": {
           "xyz": [
@@ -577,12 +625,115 @@
             0
           ]
         }
-      },
+      }
+    },
+    "collision": {
       "geometry": {
         "mesh": {
           "$": {
             "filename": "meshes/left_wrist_roll_link.STL"
           }
+        }
+      },
+      "origin": {
+        "$": {
+          "xyz": [
+            0,
+            0,
+            0
+          ],
+          "rpy": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    }
+  },
+  "left_wrist_pitch_link": {
+    "$": {
+      "name": "left_wrist_pitch_link"
+    },
+    "inertial": {
+      "mass": {
+        "$": {
+          "value": "0.48404956"
+        }
+      },
+      "inertia": {
+        "$": {
+          "ixx": "0.00016579646273",
+          "ixy": "-0.00001231206746",
+          "ixz": "0.00001231699194",
+          "iyy": "0.00042954057410",
+          "iyz": "0.00000081417712",
+          "izz": "0.00042953697654"
+        }
+      },
+      "origin": {
+        "$": {
+          "xyz": [
+            0.02299989837,
+            -0.00111685314,
+            -0.00111658096
+          ],
+          "rpy": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "visual": {
+      "geometry": {
+        "mesh": {
+          "$": {
+            "filename": "meshes/left_wrist_pitch_link.STL"
+          }
+        }
+      },
+      "material": {
+        "$": {
+          "name": "white"
+        }
+      },
+      "origin": {
+        "$": {
+          "xyz": [
+            0,
+            0,
+            0
+          ],
+          "rpy": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "collision": {
+      "geometry": {
+        "mesh": {
+          "$": {
+            "filename": "meshes/left_wrist_pitch_link.STL"
+          }
+        }
+      },
+      "origin": {
+        "$": {
+          "xyz": [
+            0,
+            0,
+            0
+          ],
+          "rpy": [
+            0,
+            0,
+            0
+          ]
         }
       }
     }
@@ -592,20 +743,6 @@
       "name": "left_wrist_yaw_link"
     },
     "inertial": {
-      "origin": {
-        "$": {
-          "xyz": [
-            0.02200381568,
-            0.00049485096,
-            0.00053861123
-          ],
-          "rpy": [
-            0,
-            0,
-            0
-          ]
-        }
-      },
       "mass": {
         "$": {
           "value": "0.08457647"
@@ -620,15 +757,13 @@
           "iyz": "0.00000043217198",
           "izz": "0.00003928083826"
         }
-      }
-    },
-    "visual": {
+      },
       "origin": {
         "$": {
           "xyz": [
-            0,
-            0,
-            0
+            0.02200381568,
+            0.00049485096,
+            0.00053861123
           ],
           "rpy": [
             0,
@@ -636,7 +771,9 @@
             0
           ]
         }
-      },
+      }
+    },
+    "visual": {
       "geometry": {
         "mesh": {
           "$": {
@@ -648,9 +785,7 @@
         "$": {
           "name": "white"
         }
-      }
-    },
-    "collision": {
+      },
       "origin": {
         "$": {
           "xyz": [
@@ -664,27 +799,22 @@
             0
           ]
         }
-      },
+      }
+    },
+    "collision": {
       "geometry": {
         "mesh": {
           "$": {
             "filename": "meshes/left_wrist_yaw_link.STL"
           }
         }
-      }
-    }
-  },
-  "torso_link": {
-    "$": {
-      "name": "torso_link"
-    },
-    "inertial": {
+      },
       "origin": {
         "$": {
           "xyz": [
-            0.002601,
-            0.000257,
-            0.153719
+            0,
+            0,
+            0
           ],
           "rpy": [
             0,
@@ -692,30 +822,35 @@
             0
           ]
         }
-      },
+      }
+    }
+  },
+  "left_hand_palm_link": {
+    "$": {
+      "name": "left_hand_palm_link"
+    },
+    "inertial": {
       "mass": {
         "$": {
-          "value": "8.562"
+          "value": "0.37283854"
         }
       },
       "inertia": {
         "$": {
-          "ixx": "0.065674966",
-          "ixy": "-8.597E-05",
-          "ixz": "-0.001737252",
-          "iyy": "0.053535188",
-          "iyz": "8.6899E-05",
-          "izz": "0.030808125"
+          "ixx": "0.00027535181027",
+          "ixy": "-0.00001595519465",
+          "ixz": "-0.00000242161890",
+          "iyy": "0.00053951827219",
+          "iyz": "-0.00000042279435",
+          "izz": "0.00039623390907"
         }
-      }
-    },
-    "visual": {
+      },
       "origin": {
         "$": {
           "xyz": [
-            0,
-            0,
-            0
+            0.06214634836,
+            -0.00050869656,
+            -0.00058171093
           ],
           "rpy": [
             0,
@@ -723,144 +858,44 @@
             0
           ]
         }
-      },
+      }
+    },
+    "visual": {
       "geometry": {
         "mesh": {
           "$": {
-            "filename": "meshes/torso_link.STL"
+            "filename": "meshes/left_hand_palm_link.STL"
           }
         }
       },
       "material": {
         "$": {
           "name": "white"
+        }
+      },
+      "origin": {
+        "$": {
+          "xyz": [
+            0,
+            0,
+            0
+          ],
+          "rpy": [
+            0,
+            0,
+            0
+          ]
         }
       }
     },
     "collision": {
-      "origin": {
-        "$": {
-          "xyz": [
-            0,
-            0,
-            0
-          ],
-          "rpy": [
-            0,
-            0,
-            0
-          ]
-        }
-      },
       "geometry": {
         "mesh": {
           "$": {
-            "filename": "meshes/torso_link.STL"
-          }
-        }
-      }
-    }
-  },
-  "waist_roll_link": {
-    "$": {
-      "name": "waist_roll_link"
-    },
-    "inertial": {
-      "origin": {
-        "$": {
-          "xyz": [
-            0,
-            -0.000236,
-            0.010111
-          ],
-          "rpy": [
-            0,
-            0,
-            0
-          ]
-        }
-      },
-      "mass": {
-        "$": {
-          "value": "0.047"
-        }
-      },
-      "inertia": {
-        "$": {
-          "ixx": "7.515E-06",
-          "ixy": "0",
-          "ixz": "0",
-          "iyy": "6.398E-06",
-          "iyz": "9.9E-08",
-          "izz": "3.988E-06"
-        }
-      }
-    },
-    "visual": {
-      "origin": {
-        "$": {
-          "xyz": [
-            0,
-            0,
-            0
-          ],
-          "rpy": [
-            0,
-            0,
-            0
-          ]
-        }
-      },
-      "geometry": {
-        "mesh": {
-          "$": {
-            "filename": "meshes/waist_roll_link.STL"
+            "filename": "meshes/left_hand_palm_link.STL"
           }
         }
       },
-      "material": {
-        "$": {
-          "name": "white"
-        }
-      }
-    }
-  },
-  "waist_yaw_link": {
-    "$": {
-      "name": "waist_yaw_link"
-    },
-    "inertial": {
-      "origin": {
-        "$": {
-          "xyz": [
-            0.003964,
-            0,
-            0.018769
-          ],
-          "rpy": [
-            0,
-            0,
-            0
-          ]
-        }
-      },
-      "mass": {
-        "$": {
-          "value": "0.244"
-        }
-      },
-      "inertia": {
-        "$": {
-          "ixx": "9.9587E-05",
-          "ixy": "-1.833E-06",
-          "ixz": "-1.2617E-05",
-          "iyy": "0.00012411",
-          "iyz": "-1.18E-07",
-          "izz": "0.00015586"
-        }
-      }
-    },
-    "visual": {
       "origin": {
         "$": {
           "xyz": [
@@ -873,18 +908,6 @@
             0,
             0
           ]
-        }
-      },
-      "geometry": {
-        "mesh": {
-          "$": {
-            "filename": "meshes/waist_yaw_link.STL"
-          }
-        }
-      },
-      "material": {
-        "$": {
-          "name": "white"
         }
       }
     }

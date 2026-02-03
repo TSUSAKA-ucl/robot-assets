@@ -2,120 +2,48 @@
   "right_hand_palm_link": {
     "visual": [
       {
-	"origin": { "$": {
-          "rpy": [ 1.5707963267948966192, 0, 0 ],
-	  "xyz": [ 0, 0, 0 ]
-	}},
-        "geometry": {
-          "mesh": {
-            "$": {
-              "filename": "right_hand_palm_link.STL.gltf"
-            }
-          }
-        }
+        "geometry": {"mesh": {"$": {"filename": "right_hand_palm_link.gltf"}}},
+        "origin": {"$": {"xyz": [0, 0, 0], "rpy": [1.5707963267948966, 0, 0]}}
       },
       {
-	"origin": { "$": {
-          "rpy": [ 1.5707963267948966192, 0, 0 ],
-	  "xyz": [ 0, 0, 0 ]
-	}},
-        "geometry": {
-          "mesh": {
-            "$": {
-              "filename": "right_hand_palm_link.bbox.gltf"
-            }
-          }
-        }
+        "geometry": {"mesh": {"$": {"filename": "right_hand_palm_link.bbox.gltf"}}},
+        "origin": {"$": {"xyz": [0, 0, 0], "rpy": [1.5707963267948966, 0, 0]}}
       }
     ]
   },
   "right_hand_thumb_0_link": {
     "visual": [
       {
-	"origin": { "$": {
-          "rpy": [ 1.5707963267948966192, 0, 0 ],
-	  "xyz": [ 0, 0, 0 ]
-	}},
-        "geometry": {
-          "mesh": {
-            "$": {
-              "filename": "right_hand_thumb_0_link.STL.gltf"
-            }
-          }
-        }
+        "geometry": {"mesh": {"$": {"filename": "right_hand_thumb_0_link.gltf"}}},
+        "origin": {"$": {"xyz": [0, 0, 0], "rpy": [1.5707963267948966, 0, 0]}}
       },
       {
-	"origin": { "$": {
-          "rpy": [ 1.5707963267948966192, 0, 0 ],
-	  "xyz": [ 0, 0, 0 ]
-	}},
-        "geometry": {
-          "mesh": {
-            "$": {
-              "filename": "right_hand_thumb_0_link.bbox.gltf"
-            }
-          }
-        }
+        "geometry": {"mesh": {"$": {"filename": "right_hand_thumb_0_link.bbox.gltf"}}},
+        "origin": {"$": {"xyz": [0, 0, 0], "rpy": [1.5707963267948966, 0, 0]}}
       }
     ]
   },
   "right_hand_thumb_1_link": {
     "visual": [
       {
-	"origin": { "$": {
-          "rpy": [ 1.5707963267948966192, 0, 0 ],
-	  "xyz": [ 0, 0, 0 ]
-	}},
-        "geometry": {
-          "mesh": {
-            "$": {
-              "filename": "right_hand_thumb_1_link.STL.gltf"
-            }
-          }
-        }
+        "geometry": {"mesh": {"$": {"filename": "right_hand_thumb_1_link.gltf"}}},
+        "origin": {"$": {"xyz": [0, 0, 0], "rpy": [1.5707963267948966, 0, 0]}}
       },
       {
-	"origin": { "$": {
-          "rpy": [ 1.5707963267948966192, 0, 0 ],
-	  "xyz": [ 0, 0, 0 ]
-	}},
-        "geometry": {
-          "mesh": {
-            "$": {
-              "filename": "right_hand_thumb_1_link.bbox.gltf"
-            }
-          }
-        }
+        "geometry": {"mesh": {"$": {"filename": "right_hand_thumb_1_link.bbox.gltf"}}},
+        "origin": {"$": {"xyz": [0, 0, 0], "rpy": [1.5707963267948966, 0, 0]}}
       }
     ]
   },
   "right_hand_thumb_2_link": {
     "visual": [
       {
-	"origin": { "$": {
-          "rpy": [ 1.5707963267948966192, 0, 0 ],
-	  "xyz": [ 0, 0, 0 ]
-	}},
-        "geometry": {
-          "mesh": {
-            "$": {
-              "filename": "right_hand_thumb_2_link.STL.gltf"
-            }
-          }
-        }
+        "geometry": {"mesh": {"$": {"filename": "right_hand_thumb_2_link.gltf"}}},
+        "origin": {"$": {"xyz": [0, 0, 0], "rpy": [1.5707963267948966, 0, 0]}}
       },
       {
-	"origin": { "$": {
-          "rpy": [ 1.5707963267948966192, 0, 0 ],
-	  "xyz": [ 0, 0, 0 ]
-	}},
-        "geometry": {
-          "mesh": {
-            "$": {
-              "filename": "right_hand_thumb_2_link.bbox.gltf"
-            }
-          }
-        }
+        "geometry": {"mesh": {"$": {"filename": "right_hand_thumb_2_link.bbox.gltf"}}},
+        "origin": {"$": {"xyz": [0, 0, 0], "rpy": [1.5707963267948966, 0, 0]}}
       }
     ]
   }
