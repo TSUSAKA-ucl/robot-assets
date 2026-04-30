@@ -1,6 +1,6 @@
 {
   "name": "@ucl-nuee/ur5e",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "files": [
     "public/ur5e/base.bin",
     "public/ur5e/base.gltf",
