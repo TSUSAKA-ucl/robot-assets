@@ -4,10 +4,6 @@
       {
         "geometry": {"mesh": {"$": {"filename": "waist_yaw_link_rev_1_0.gltf"}}},
         "origin": {"$": {"xyz": [0, 0, 0], "rpy": [1.5707963267948966, 0, 0]}}
-      },
-      {
-        "geometry": {"mesh": {"$": {"filename": "waist_yaw_link_rev_1_0.bbox.gltf"}}},
-        "origin": {"$": {"xyz": [0, 0, 0], "rpy": [1.5707963267948966, 0, 0]}}
       }
     ]
   },
@@ -15,10 +11,6 @@
     "visual": [
       {
         "geometry": {"mesh": {"$": {"filename": "waist_roll_link_rev_1_0.gltf"}}},
-        "origin": {"$": {"xyz": [0, 0, 0], "rpy": [1.5707963267948966, 0, 0]}}
-      },
-      {
-        "geometry": {"mesh": {"$": {"filename": "waist_roll_link_rev_1_0.bbox.gltf"}}},
         "origin": {"$": {"xyz": [0, 0, 0], "rpy": [1.5707963267948966, 0, 0]}}
       }
     ]
@@ -88,10 +80,6 @@
       {
         "geometry": {"mesh": {"$": {"filename": "right_wrist_roll_link.gltf"}}},
         "origin": {"$": {"xyz": [0, 0, 0], "rpy": [1.5707963267948966, 0, 0]}}
-      },
-      {
-        "geometry": {"mesh": {"$": {"filename": "right_wrist_roll_link.bbox.gltf"}}},
-        "origin": {"$": {"xyz": [0, 0, 0], "rpy": [1.5707963267948966, 0, 0]}}
       }
     ]
   },
@@ -111,10 +99,6 @@
     "visual": [
       {
         "geometry": {"mesh": {"$": {"filename": "right_wrist_yaw_link.gltf"}}},
-        "origin": {"$": {"xyz": [0, 0, 0], "rpy": [1.5707963267948966, 0, 0]}}
-      },
-      {
-        "geometry": {"mesh": {"$": {"filename": "right_wrist_yaw_link.bbox.gltf"}}},
         "origin": {"$": {"xyz": [0, 0, 0], "rpy": [1.5707963267948966, 0, 0]}}
       }
     ]

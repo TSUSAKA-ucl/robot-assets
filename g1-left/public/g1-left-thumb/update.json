@@ -16,10 +16,6 @@
       {
         "geometry": {"mesh": {"$": {"filename": "left_hand_thumb_0_link.gltf"}}},
         "origin": {"$": {"xyz": [0, 0, 0], "rpy": [1.5707963267948966, 0, 0]}}
-      },
-      {
-        "geometry": {"mesh": {"$": {"filename": "left_hand_thumb_0_link.bbox.gltf"}}},
-        "origin": {"$": {"xyz": [0, 0, 0], "rpy": [1.5707963267948966, 0, 0]}}
       }
     ]
   },
